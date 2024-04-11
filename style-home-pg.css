@@ -7,3 +7,7 @@ main {
   font: 400, bold;
   font-size: medium;
 }
+
+p {
+  background-color: aquamarine;
+}
