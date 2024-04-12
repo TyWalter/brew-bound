@@ -19,7 +19,7 @@ function formSubmit(event) {
   }
 
 
-function getApi(){
+function searchApi(){
   const requestUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySearch}&by_name=${nameSearch}&by_postal=${postalSearch}&by_type=${typeSearch}&sort=type,name:${sortSearch}&per_page=${perPageSearch}`;
   fetch(requestUrl)
   .then(function (response){
@@ -34,6 +34,6 @@ function getApi(){
   })
 };
 
-getApi();
+searchApi();
 
 formEl.addEventListener('submit', formSubmit);
