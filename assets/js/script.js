@@ -20,30 +20,29 @@ function randomApi(){
 
 
 function printRandom(data){
-  for (let i=0; i<data.length; i++){
-    const article = data[Math.floor(Math.random()*data.length)]
-    console.log(article)
-    const nameEl = document.createElement('h3')
-    nameEl.textContent = article.name
-    const cityEl = document.createElement('p')
-    cityEl.textContent = article.city
-    const stateEl = document.createElement('p')
-    stateEl.textContent = article.state
-    const phoneEl = document.createElement('p')
-    phoneEl.textContent = article.phone
-    const urlEl = document.createElement('a')
-    urlEl.textContent = 'Visit Their Site'
-    urlEl.setAttribute('href', article.website_url)
-    const card = document.createElement('div')
-    card.appendChild(nameEl)
-    card.appendChild(cityEl)
-    card.appendChild(stateEl)
-    card.appendChild(phoneEl)
-    card.appendChild(urlEl)
-    bestBrew.appendChild(card)
-  }
-}
+  const randomizer = data.sort(() => Math.random() - 0.5)
+  const random = randomizer[0]
 
+  
+  const nameEl = document.createElement('h3')
+  nameEl.textContent = random.name
+  const cityEl = document.createElement('p')
+  cityEl.textContent = random.city
+  const stateEl = document.createElement('p')
+  stateEl.textContent = random.state
+  const phoneEl = document.createElement('p')
+  phoneEl.textContent = random.phone
+  const urlEl = document.createElement('a')
+  urlEl.textContent = 'Visit Their Site'
+  urlEl.setAttribute('href', random.website_url)
+  const card = document.createElement('div')
+  card.appendChild(nameEl)
+  card.appendChild(cityEl)
+  card.appendChild(stateEl)
+  card.appendChild(phoneEl)
+  card.appendChild(urlEl)
+  bestBrew.appendChild(card)
+}
 
 
 function formSubmit(event) {
@@ -54,8 +53,8 @@ function formSubmit(event) {
   const postalSearch = document.querySelector('#xxxxx').value;
   const typeSearch = document.querySelector('#xxxxx').value;
 
-  if (!citySearch) {
-    console.error('You need to enter a city!');
+  if (!typeSearch) {
+    console.error('You need to select a type of brewery!');
     return;
   } document.location.assign('search-results.html');
     localStorage.setItem('Name', nameSearch);
