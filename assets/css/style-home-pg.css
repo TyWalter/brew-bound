@@ -1,13 +1,52 @@
-body {
-  background-color: gold;
+/* color scheme sourced from https://coolors.co/ 
+- This is also Attached in Images. */
+:root {
+  --aureolin: #FBEE37;
+  --alloy-orange: #CD6305;
+  --barn-red: #770A05;
+  --brew-bound-logo: #644521;
+}
+
+
+/* This is where the Hero Img is placed */
+header {
+  background-image: url(../images/hero-img-unsplash.jpg);
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+
+nav {
+  text-align: right;
+}
+
+
+/* This is the Link of the nav bar. */
+a{
+  color: white;
+  margin: 5px;
 }
 
 
 main {
-  font: 400, bold;
-  font-size: medium;
+  background-color: var(--kobicha);
 }
 
-p {
-  background-color: aquamarine;
+
+/* This is the background of the Main tag - this is the area behind the form. */
+.form-background {
+  background-size: cover;
+  background-image: url(../images/indoor-brick-wall-texture.jpg);
+  border-top: solid 3px var(--brew-bound-logo);
 }
+
+
+/* This is the About Us Section  */
+article.container-about-us {
+  background-color: var(--brew-bound-logo);
+  color: white;
+
+}
+
+
