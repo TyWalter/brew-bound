@@ -45,7 +45,6 @@ function printRandom(data){
 }
 
 
-
 function formSubmit(event) {
   event.preventDefault();
 
@@ -54,8 +53,8 @@ function formSubmit(event) {
   const postalSearch = document.querySelector('#xxxxx').value;
   const typeSearch = document.querySelector('#xxxxx').value;
 
-  if (!citySearch) {
-    console.error('You need to enter a city!');
+  if (!typeSearch) {
+    console.error('You need to select a type of brewery!');
     return;
   } document.location.assign('search-results.html');
     localStorage.setItem('Name', nameSearch);
