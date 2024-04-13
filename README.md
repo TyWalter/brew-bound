@@ -1,13 +1,11 @@
-# Group Project: Off Leash
+# Group Project: Brew Bound
 
 ## Overview Description
-Welcome to Off Leash! 
+Welcome to Brew Bound!
 
-We have created a web application that helps People and their Furry Companions to be able to enjoy the freedom of being off leash at designated parks and trails! We wanted to provide an easy way for the public to be able to locate these areas in their local communities. 
+We have created a web application that helps the Public and Breweries to find each other! We wanted to have a central hub that not only allows for brewereies to publish thier craft beers and ciders, it allows for locals and new patrions to connect and find new breweries to explore!
 
-- Have you had a long day at work and ran out of time to take your dog for your daily hike?
-- Do you want to explore new and familiar areas with out the hassel of tangled up leashes?
-- Are you traveling and need a place to take your dog to stretch their legs?
+Please take a look at our prototype at the bottom of this README and all feedback is welcome!
 
 
 ## Group Project - Acceptance Criteria
