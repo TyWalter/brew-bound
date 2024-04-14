@@ -36,6 +36,7 @@ main {
 
 /* This is the background of the Main tag - this is the area behind the form. */
 .form-background {
+  color: white;
   background-size: cover;
   background-image: url(../images/indoor-brick-wall-texture.jpg);
   border-top: solid 3px var(--brew-bound-logo);
