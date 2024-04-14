@@ -152,7 +152,31 @@ button {
 article.container-about-us {
   background-color: var(--brew-bound-logo);
   color: white;
+  line-height: 1.4;
+}
 
+.about-us-content {
+  padding: 10px;
+  margin: center;
+  text-wrap: wrap;
 }
 
 
+h4 {
+  color: var(--alloy-orange);
+  text-shadow: 2px 8px 6px #00000033, 0px -5px 35px #e1e1ff4d;
+  font-size: x-large;
+  word-spacing: 2px;
+}
+
+#logo {
+  border-radius: 45px 45px 45px 45px;
+  object-fit:cover;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+/* The beer cheers emoji only */
+#cheers {
+  font-size: 30px;
+}
