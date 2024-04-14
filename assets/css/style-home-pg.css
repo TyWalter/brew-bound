@@ -9,26 +9,27 @@
 
 
 /* This is where the Hero Img is placed */
-header {
-  background-image: url(../images/hero-img-unsplash.jpg);
-  height: 25rem;
-  background-size: cover;
-  background-position: center;
+  header {
+    background-image: url(../images/hero-img-unsplash.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  nav {
+    text-align: right;
 }
 
 
-nav {
-  text-align: right;
-}
-
-
-/* This is the Link of the nav bar. */
+/* This is the Link styling for all links on the page. */
 a{
   color: var(--alloy-orange);
   margin: 5px;
 }
 
 
+/* This is the background of the Main tag - this is the area behind the form in the event the image fails to load properly - that it has a color space to have to match the theme. */
 .form-background container {
   background-color: var(--kobicha);
     display: flex;
@@ -38,7 +39,7 @@ a{
 }
 
 
-/* This is the background of the Main tag - this is the area behind the form. */
+/* Main Tag Backround image*/
 #form-selection {
   color: white;
   background-size: cover;
@@ -46,50 +47,56 @@ a{
   border-top: solid 3px var(--brew-bound-logo);
 }
 
+
 /* Styling for form input*/
-h1 {
-  color: white;
-  font-size: 19px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.placeholder-text label {
-  display: none;
-}
-
-.placeholder-text input {
-  font-style: italic;
-  margin: 10px auto;
-  &:focus, &:hover {
-    background-color: #dee1e4;
-    box-shadow: 0 0 .6rem .3rem var(--barn-red);
+  h1 {
+    color: white;
+    font-size: 19px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+     text-align: center;
   }
-}
 
-.placeholder-text select {
-  margin: 10px auto;
-  &:focus, &:hover {
-    font-style: normal;
-    background-color: #dee1e4;
-    box-shadow: 0 0 .6rem .3rem var(--barn-red);
+  .placeholder-text label {
+    display: none;
   }
+
+  .placeholder-text input {
+    font-style: italic;
+    margin: 10px auto;
+    &:focus {
+      background-color: #dee1e4;
+      box-shadow: 0 0 .6rem .3rem var(--barn-red);
+    }
+
+  .placeholder-text select {
+    margin: 10px auto;
+    &:focus {
+      font-style: normal;
+      background-color: #dee1e4;
+      box-shadow: 0 0 .6rem .3rem var(--barn-red);
+    }
+
+  option:first-of-type {
+    display: none;
+  }
+
+  #submit {
+    display: flex;
+    color: white;
+    position: relative;
+    align-content: end;
+    padding: 5px 30px;
+    margin: 30px 0px;
+    background-color: var(--barn-red);
+  }
+
+  .dropdown-toggle {
+    margin: 10px;
+    flex-wrap: wrap;
+    white-space: normal;
 }
 
-option:first-of-type {
-  display: none;
-}
-
-#submit {
-  display: flex;
-  color: white;
-  position: relative;
-  align-content: end;
-  padding: 5px 30px;
-  margin: 30px 0px;
-  background-color: var(--barn-red);
-}
 
 /* title on top of the side bar */
 .tab {
@@ -104,13 +111,17 @@ option:first-of-type {
   align-items: center;
 }
 
+
+/* JS appended card for asisde section */
 #best-brew{
   display: flex;
   margin-left: 20px;
   margin-right: 20px;
+  color: var(--brew-bound-logo)
 }
 
-/* Side bar on the right */
+
+/* aside tag location to be on the right */
 .aside-container {
   display: flex;
   background-color: #ffd9ab;
@@ -125,7 +136,7 @@ option:first-of-type {
 }
 
 
-/* button */
+/* aside button */
 button {
   border-radius: 20px;
   background-color: #2d0d4a;
@@ -133,17 +144,37 @@ button {
   width: 100px;
 }
 
-.dropdown-toggle {
-  margin: 10px;
-  flex-wrap: wrap;
-  white-space: normal;
-}
 
 
 /* This is the About Us Section  */
 article.container-about-us {
   background-color: var(--brew-bound-logo);
   color: white;
+  line-height: 1.4;
+}
+
+.about-us-content {
+  padding: 10px;
+  margin: center;
+  text-wrap: wrap;
 }
 
 
+h4 {
+  color: var(--alloy-orange);
+  text-shadow: 2px 8px 6px #00000033, 0px -5px 35px #e1e1ff4d;
+  font-size: x-large;
+  word-spacing: 2px;
+}
+
+#logo {
+  border-radius: 45px 45px 45px 45px;
+  object-fit:cover;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+/* The beer cheers emoji only */
+#cheers {
+  font-size: 30px;
+}
