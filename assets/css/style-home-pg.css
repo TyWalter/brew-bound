@@ -68,7 +68,6 @@ a{
       background-color: #dee1e4;
       box-shadow: 0 0 .6rem .3rem var(--barn-red);
     }
-  }
 
   .placeholder-text select {
     margin: 10px auto;
@@ -77,7 +76,6 @@ a{
       background-color: #dee1e4;
       box-shadow: 0 0 .6rem .3rem var(--barn-red);
     }
-  }
 
   option:first-of-type {
     display: none;

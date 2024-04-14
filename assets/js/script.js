@@ -48,16 +48,14 @@ function printRandom(data){
 function formSubmit(event) {
   event.preventDefault();
 
-  const nameSearch = document.querySelector('#xxxxx').value;
-  const citySearch = document.querySelector('#xxxxx').value;
-  const postalSearch = document.querySelector('#xxxxx').value;
-  const typeSearch = document.querySelector('#xxxxx').value;
+  const citySearch = document.querySelector('#cname').value;
+  const postalSearch = document.querySelector('#zipcode').value;
+  const typeSearch = document.querySelector('#type').value;
 
   if (!typeSearch) {
     console.error('You need to select a type of brewery!');
     return;
   } document.location.assign('search-results.html');
-    localStorage.setItem('Name', nameSearch);
     localStorage.setItem('City', citySearch);
     localStorage.setItem('Postal', postalSearch);
     localStorage.setItem('Type', typeSearch);
@@ -68,3 +66,4 @@ randomApi();
 
 
 formSel.addEventListener('submit', formSubmit);
+
