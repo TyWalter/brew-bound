@@ -46,6 +46,50 @@ a{
   border-top: solid 3px var(--brew-bound-logo);
 }
 
+/* Styling for form input*/
+h1 {
+  color: white;
+  font-size: 19px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.placeholder-text label {
+  display: none;
+}
+
+.placeholder-text input {
+  font-style: italic;
+  margin: 10px auto;
+  &:focus {
+    background-color: #dee1e4;
+    box-shadow: 0 0 .6rem .3rem var(--barn-red);
+  }
+}
+
+.placeholder-text select {
+  margin: 10px auto;
+  &:focus {
+    font-style: normal;
+    background-color: #dee1e4;
+    box-shadow: 0 0 .6rem .3rem var(--barn-red);
+  }
+}
+
+option:first-of-type {
+  display: none;
+}
+
+#submit {
+  display: flex;
+  color: white;
+  position: relative;
+  align-content: end;
+  padding: 5px 30px;
+  margin: 30px 0px;
+  background-color: var(--barn-red);
+}
 
 /* title on top of the side bar */
 .tab {
@@ -93,13 +137,6 @@ button {
   margin: 10px;
   flex-wrap: wrap;
   white-space: normal;
-}
-
-#submit {
-  display: flex;
-  align-content: end;
-  padding: 5px;
-  margin: 30px;
 }
 
 

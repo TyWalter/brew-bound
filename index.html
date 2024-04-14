@@ -39,49 +39,44 @@
           <div class= "span6 offset3">
             <h1>Fill out the form below to discover tasty new brews!</h1>
             <form id="demo-form" data-parsley-validate="">
-              <label for="bname">Brewery Name: </label>
-              <input type="text" class="form-control" id="bname" name="bname" required=""/> 
-                <br>
-              <label for="cname">City: </label>
-              <input type="text" class="form-control" id="cname" name="cname" required=""/> 
-                <br>
-              <label for="zipcode">Zip Code: </label>
-              <input type="number" class="form-control id="zipcode" name="zipcode" data-parsley-type="number" required=""/> 
-                <br>
-              <div class ="form-group">
-                <label>Type of Brewery</label>
-                <select class="form-control" id="type"></select>
-                <button class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                </button>
-                <ul class="dropdown-menu" class="form-control">
-                  <li><a class="dropdown-item" href="#">Micro</a></li>
-                  <li><a class="dropdown-item" href="#">Nano</a></li>
-                  <li><a class="dropdown-item" href="#">Regional</a></li>
-                  <li><a class="dropdown-item" href="#">Brewpub</a></li>
-                  <li><a class="dropdown-item" href="#">Large</a></li>
-                  <li><a class="dropdown-item" href="#">Planning</a></li>
-                  <li><a class="dropdown-item" href="#">Bar</a></li>
-                  <li><a class="dropdown-item" href="#">Contract</a></li>
-                  <li><a class="dropdown-item" href="#">Proprietor</a></li>
-                  <li><a class="dropdown-item" href="#">Closed</a></li>
-                </ul>
+              <div class="placeholder-text">
+                <label for="cname">City: </label>
+                <input type="text" class="form-control" id="cname" name="cname" placeholder="City" required=""/> 
               </div>
-              <input id="submit" type="submit" value="Submit" class="btn btn-success"/>
+              <br>
+              <div class="placeholder-text">
+                <label for="zipcode">Zip Code: </label>
+                <input type="number" class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code" data-parsley-type="number"/>
+              </div> 
+              <br>
+              <div class="placeholder-text">
+                <div class ="form-group">
+                  <label>Type of Brewery</label>
+                  <select class="form-control" id="type" required="">
+                    <option value="">Choose the type of brewery</option>
+                    <option value="Micro">Micro</option>
+                    <option value="Nano">Nano</option>
+                    <option value="Regional">Regional</option>
+                    <option value="Brewpub">Brewpub</option>
+                    <option value="Large">Large</option>
+                    <option value="Bar">Bar</option>
+                    <option value="Proprietor">Proprietor</option>
+                  </select>
+                </div>
+              </div>
+              <input id="submit" type="submit" value="Submit" class="btn"/>
             </form>
           </div>
         </div> 
-     
       <div class="col-3">
         <aside class="spotlight">
-        <div class="aside-container">
-          <p class="tab">Brew Spotlight!</p>
-          <p id="best-brew"></p>
-        </div>
-      </aside>
-     </div>
-    </div>     
-   </div>
- </main>
+          <div class="aside-container">
+            <p class="tab">Brew Spotlight!</p>
+            <p id="best-brew"></p>
+          </div>
+        </aside>
+      </div>
+    </main>
 
 
 
@@ -119,7 +114,6 @@
     
 
     <footer id="contact">
-      <!-- Britt has changed her mind, and does not want a directory here, am subject to vote.  -->
       <nav>
         </section>
         <a href="#home">Home</a>
