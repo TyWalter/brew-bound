@@ -34,43 +34,54 @@
 
     <main id="form-selection">
       <div class="form-background container">
-        <div class="row">
+        <div class="row justify-content-around">
+          <div class="col-5">
           <div class= "span6 offset3">
             <h1>Fill out the form below to discover tasty new brews!</h1>
             <form id="demo-form" data-parsley-validate="">
-              <lable for="bname">Brewery Name: </lable>
+              <label for="bname">Brewery Name: </label>
               <input type="text" class="form-control" id="bname" name="bname" required=""/> 
                 <br>
-              <lable for="cname">City: </lable>
+              <label for="cname">City: </label>
               <input type="text" class="form-control" id="cname" name="cname" required=""/> 
                 <br>
-              <lable for="zipcode">Zip Code: </lable>
-              <input type="text" class="form-control id="zipcode" name="zipcode" required=""/> 
+              <label for="zipcode">Zip Code: </label>
+              <input type="number" class="form-control id="zipcode" name="zipcode" data-parsley-type="number" required=""/> 
                 <br>
-              <div class ="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Type of Brewery
+              <div class ="form-group">
+                <label>Type of Brewery</label>
+                <select class="form-control" id="type"></select>
+                <button class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
                 <ul class="dropdown-menu" class="form-control">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Micro</a></li>
+                  <li><a class="dropdown-item" href="#">Nano</a></li>
+                  <li><a class="dropdown-item" href="#">Regional</a></li>
+                  <li><a class="dropdown-item" href="#">Brewpub</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                  <li><a class="dropdown-item" href="#">Planning</a></li>
+                  <li><a class="dropdown-item" href="#">Bar</a></li>
+                  <li><a class="dropdown-item" href="#">Contract</a></li>
+                  <li><a class="dropdown-item" href="#">Proprietor</a></li>
+                  <li><a class="dropdown-item" href="#">Closed</a></li>
                 </ul>
               </div>
-              <input type="submit" value="Submit" class="btn btn-success"/>
+              <input id="submit" type="submit" value="Submit" class="btn btn-success"/>
             </form>
-          </div>     
-          <aside id="best-brew">
-            <p> </p>
-          </aside>
-        </div>
-      </div>
-      <aside class="spotlight">
+          </div>
+        </div> 
+     
+      <div class="col-3">
+        <aside class="spotlight">
         <div class="aside-container">
           <p class="tab">Brew Spotlight!</p>
           <p id="best-brew"></p>
         </div>
       </aside>
-    </main>
+     </div>
+    </div>     
+   </div>
+ </main>
 
 
 

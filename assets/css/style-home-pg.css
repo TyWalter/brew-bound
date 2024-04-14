@@ -29,7 +29,7 @@ a{
 }
 
 
-.form-container {
+.form-background container {
   background-color: var(--kobicha);
     display: flex;
     margin: 50px;
@@ -39,7 +39,7 @@ a{
 
 
 /* This is the background of the Main tag - this is the area behind the form. */
-.form-background {
+#form-selection {
   color: white;
   background-size: cover;
   background-image: url(../images/indoor-brick-wall-texture.jpg);
@@ -89,7 +89,18 @@ button {
   width: 100px;
 }
 
+.dropdown-toggle {
+  margin: 10px;
+  flex-wrap: wrap;
+  white-space: normal;
+}
 
+#submit {
+  display: flex;
+  align-content: end;
+  padding: 5px;
+  margin: 30px;
+}
 
 
 /* This is the About Us Section  */
