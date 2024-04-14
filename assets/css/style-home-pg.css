@@ -64,14 +64,14 @@ h1 {
 .placeholder-text input {
   font-style: italic;
   margin: 10px auto;
-  &:focus {
+  &:focus, &:hover {
     background-color: #dee1e4;
     box-shadow: 0 0 .6rem .3rem var(--barn-red);
   }
 }
 .placeholder-text select {
   margin: 10px auto;
-  &:focus {
+  &:focus, &:hover {
     font-style: normal;
     background-color: #dee1e4;
     box-shadow: 0 0 .6rem .3rem var(--barn-red);
