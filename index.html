@@ -33,13 +33,13 @@
 
     </header>
     
-    <div class="form-background" class= "container">
+  <main id="form-selection">
+    <div class="form-background container">
       <div class="row">
         <div class= "span6 offset3">
           <h1>Fill out the form below to discover tasty new brews!</h1>
-<main id="form-selection">
         <!-- This is only a placeholder form, I needed a way to show the form on the foreground, while working to get the background img to appear.  -->
-        <!-- Please delete when ready. -->
+
   <form id="demo-form" data-parsley-validate="">
         <lable for="bname">Brewery Name: </lable>
         <input type="text" class="form-control" id="bname" name="bname" required=""/> 
@@ -51,6 +51,7 @@
         
         <br>
     
+
         <lable for="zipcode">Zip Code: </lable>
         <input type="text" class="form-control id="zipcode" name="zipcode" required=""/> 
         
@@ -67,23 +68,29 @@
       <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
     </div>
-        
-    
+       
     <input type="submit" value="Submit" class="btn btn-success"/>
     
   </form>
- </main>
 
-  <!-- <lable for="btype">Brewery Type: </lable>
-        <input type="text" class="form-control id="btype" name="btype" required=""/>  -->
 </div> -->
     
+
 
       <aside id="best-brew">
         <p> </p>
        </aside>
       </div>
      </div>
+
+        <aside class="spotlight">
+          <div class="aside-container">
+            <p class="tab">Brew Spotlight!</p>
+            <p id="best-brew"></p>
+          </div>
+        </aside>
+      </main>
+
     </div>
     
 
