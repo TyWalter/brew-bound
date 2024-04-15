@@ -1,0 +1,47 @@
+/* color scheme sourced from https://coolors.co/ 
+- This is also Attached in Images. */
+:root {
+  --aureolin: #FBEE37;
+  --alloy-orange: #CD6305;
+  --barn-red: #770A05;
+  --brew-bound-logo: #644521;
+}
+/* This is where the Hero Img is placed */
+/* header {
+  background-image: url(../images/results-hero-img.jpg);
+  height: 30rem;
+} */
+/* The Hero Image */
+.imageContainer {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 3px solid var(--brew-bound-logo);
+}
+.imageCenterer {
+  width: 100%;
+  position: absolute;
+}
+.imageCenterer img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  transform: translateY(-45%);
+}
+nav {
+  text-align: right;
+}
+.form-results-title {
+ width: 100%;
+ background-color: var(--barn-red);
+ box-shadow: 0 0 .6rem .3rem var(--alloy-orange);
+ height: 40px;
+ font-size: xx-large;
+ color: white;
+}
+.brickwall {
+  color: white;
+  background-size: cover;
+  background-image: url(../images/indoor-brick-wall-texture.jpg);
+}
