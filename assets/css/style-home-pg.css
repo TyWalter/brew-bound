@@ -184,10 +184,34 @@ h4 {
   margin-left: 35px;
 }
 
+/* shrinking the images */
+#carousel img{
+  max-width: 100%;
+  margin: auto;
+}
 /* The beer cheers emoji only */
 #cheers {
   font-size: 30px;
 }
+
+/* created a container for the carousel in a row */
+#carousel{
+  display: flex;
+  gap: 40px;
+  margin-left: 130px;
+  margin-top: 20px;
+
+/* created the /border/colors usinf flex */
+}
+.carousel-inner{
+  display:flex ;
+  border-radius: 20px;
+  border-color: #412708;
+  border-style: solid;
+
+
+}
+
 
 #contactfooter {
   background-color: var(--barn-red);
@@ -252,4 +276,4 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
-}
+

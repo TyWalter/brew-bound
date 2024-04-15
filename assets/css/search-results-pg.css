@@ -1,0 +1,131 @@
+/* color scheme sourced from https://coolors.co/ 
+- This is also Attached in Images. */
+:root {
+  --aureolin: #FBEE37;
+  --alloy-orange: #CD6305;
+  --barn-red: #770A05;
+  --brew-bound-logo: #644521;
+}
+/* This is where the Hero Img is placed */
+/* header {
+  background-image: url(../images/results-hero-img.jpg);
+  height: 30rem;
+} */
+/* The Hero Image */
+.imageContainer {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 3px solid var(--brew-bound-logo);
+}
+.imageCenterer {
+  width: 100%;
+  position: absolute;
+}
+.imageCenterer img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  transform: translateY(-45%);
+}
+
+
+nav {
+  text-align: right;
+}
+
+
+.form-results-title {
+ width: 100%;
+ background-color: var(--barn-red);
+ box-shadow: 0 0 .6rem .3rem var(--alloy-orange);
+ height: 40px;
+ font-size: xx-large;
+ color: white;
+}
+
+
+.brickwall {
+  color: white;
+  width: 100%;
+  height: 900px;
+  background-size: cover;
+  background-image: url(../images/indoor-brick-wall-texture.jpg);
+}
+
+
+/* Styling for form input*/
+  #redo-search-title {
+    background-color: var(--barn-red);
+    box-shadow: 0 0 .6rem .3rem var(--alloy-orange);
+    color: white;
+    border-radius: 30px 30px 30px 30px;
+  }
+
+  #redo-search-title p {
+    padding: 10px 10px 10px 10px;
+    line-height: 2rem;
+  }
+
+  .placeholder-text label {
+    display: none;
+  }
+
+  .placeholder-text input {
+    font-style: italic;
+    margin: 10px auto;
+    &:focus, &:hover {
+      background-color: #dee1e4;
+      box-shadow: 0 0 .6rem .3rem var(--barn-red);
+    }
+  }
+  .placeholder-text select {
+    margin: 10px auto;
+    &:focus, &:hover {
+      font-style: normal;
+      background-color: #dee1e4;
+      box-shadow: 0 0 .6rem .3rem var(--barn-red);
+    }
+  } 
+
+  option:first-of-type {
+    display: none;
+  }
+
+  #submit {
+    display: flex;
+    color: white;
+    position: relative;
+    align-content: end;
+    padding: 5px 30px;
+    margin: 30px 0px;
+    background-color: var(--barn-red);
+  }
+
+  .dropdown-toggle {
+    margin: 10px;
+    flex-wrap: wrap;
+    white-space: normal;
+}
+
+
+.randomizer-btn {
+width: 300px;
+  display: flex;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  background-color: var(--barn-red);
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--brew-bound-logo);
+  position: absolute;
+  text-shadow: 1px 1px 5px black;
+  height: 150px;
+}
+
+#websiteLink {
+  text-decoration: none;
+}
