@@ -99,52 +99,74 @@ option:first-of-type {
 }
 
 
-/* title on top of the side bar */
-.tab {
+/* aside tag location to be on the right */
+.aside-container {
   display: flex;
-    border-radius: 30px 30px 30px 30px;
-    padding: 20px;
-  color: white;
-  background-color: var(--barn-red);
-  width:198px;
-  height: 30px;
-  justify-content: center;
+  background-color: #ffd9ab;
+  border-radius: 20px;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  flex-wrap: wrap;
   align-items: center;
+  padding-top: 20px;
+  border: 2px solid #412708;
+  position: relative;
 }
 
 
 /* JS appended card for asisde section */
 #best-brew{
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
-  color: var(--brew-bound-logo)
+  margin: 0 auto;
+  color: var(--brew-bound-logo);
+  position: absolute;
+  top: 4rem;
+}
+
+.cEl, .sEl, .pEl {
+  color: #644521; 
+  text-shadow: 1px 1px 15px black; 
+  text-align: left; 
+  font-size: 12px;
+  position: relative;
+  line-height: 1.75rem;
 }
 
 
-/* aside tag location to be on the right */
-.aside-container {
+/* buttons for brew spotlight */
+.col-3 {
+  display: flex
+}
+
+.spotlight {
+  position: relative;
+  align-content: center;
+}
+
+.tab, .websiteLink {
+  width: 80%;
   display: flex;
-  background-color: #ffd9ab;
-  border-radius: 30px 30px 30px 30px;
-  flex-direction: column;
-  width: 200px;
-  height: 400px;
-  flex-wrap: wrap;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  background-color: var(--barn-red);
+  height: 30px;
+  justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  border: 2px #412708;
+  border: 2px solid var(--brew-bound-logo);
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px black;
 }
 
-
-/* aside button */
-button {
-  border-radius: 20px;
-  background-color: #2d0d4a;
-  color: #f1f2f4;
-  width: 100px;
+.tab {
+  top: 1rem;
 }
 
+.websiteLink {
+  bottom: 1rem;
+}
 
 
 /* This is the About Us Section  */
