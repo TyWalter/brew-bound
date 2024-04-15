@@ -1,5 +1,9 @@
 const formSel = document.querySelector('#form-selection');
 const bestBrew = document.querySelector('#best-brew');
+const siteLink = document.querySelector('.websiteLink');
+const cName = document.querySelector('.cEl');
+const sName = document.querySelector('.sEl');
+const pName = document.querySelector('.pEl');
 
 
 function randomApi(){
@@ -9,40 +13,65 @@ function randomApi(){
     return response.json();
   })
   .then(function(data){
-    console.log(data);
-    printRandom(data)
+    printRandom(data);
   })
   .catch(function(error){
     console.log(error);
     alert('You done messed up, A-A-ron');
-  })
+  });
 };
 
-
+// Grabbing data retrieved from fetch call, grabbing a random brewery and creating a name/city/state/phone/website from that brewery and creating a card to append the information to as well as appending the website to a button
 function printRandom(data){
-  const randomizer = data.sort(() => Math.random() - 0.5)
-  const random = randomizer[0]
+  const random = data[Math.floor(Math.random()*data.length)]
 
+  const nameEl = document.createElement('h3');
+  nameEl.textContent = random.name;
+  nameEl.setAttribute('style', 'line-height: 1rem; color: #644521; text-shadow: 1px 1px 20px black; text-align: center; font-weight: bold; font-size: 1rem; margin-left: .2rem; margin-right: .2rem; margin-bottom: -.5rem')
+
+  const cityEl = document.createElement('div');
+  cityEl.textContent = random.city;
+  cityEl.setAttribute('class', 'col')
+  cityEl.setAttribute('style', 'color: #644521; text-align: center; font-size: 14px')
+
+  const stateEl = document.createElement('div');
+  stateEl.textContent = random.state;
+  stateEl.setAttribute('class', 'col')
+  stateEl.setAttribute('style', 'color: #644521; text-align: center; font-size: 14px')
+
+  let formattedPhone = random.phone;
+  if(random.phone !== null){
+    const phoneNumber = formattedPhone.split('');
+    phoneNumber.splice(3, 0, '-')
+    phoneNumber.splice(7, 0, '-')
+    formattedPhone = phoneNumber.join('');
+  } else {
+    formattedPhone = 'Unavailable'
+  }
   
-  const nameEl = document.createElement('h3')
-  nameEl.textContent = random.name
-  const cityEl = document.createElement('p')
-  cityEl.textContent = random.city
-  const stateEl = document.createElement('p')
-  stateEl.textContent = random.state
-  const phoneEl = document.createElement('p')
-  phoneEl.textContent = random.phone
-  const urlEl = document.createElement('a')
-  urlEl.textContent = 'Visit Their Site'
-  urlEl.setAttribute('href', random.website_url)
-  const card = document.createElement('div')
-  card.appendChild(nameEl)
-  card.appendChild(cityEl)
-  card.appendChild(stateEl)
-  card.appendChild(phoneEl)
-  card.appendChild(urlEl)
-  bestBrew.appendChild(card)
-}
+
+  const phoneEl = document.createElement('div');
+  phoneEl.textContent = formattedPhone;
+  phoneEl.setAttribute('class', 'col')
+  phoneEl.setAttribute('style', 'color: #644521; text-align: center; font-size: 14px;');
+
+  if(random.website_url !== null){
+    siteLink.setAttribute('href', random.website_url);
+    siteLink.textContent = '🍻 Visit Their Site 🍻'
+    siteLink.setAttribute('style', 'font-size: 14px')
+  } else{
+    siteLink.textContent = '🍻 No site 🍻'
+  }
+
+  const card = document.createElement('p');
+  // siteLink.setAttribute('href', random.website_url);
+
+  card.appendChild(nameEl);
+  cName.appendChild(cityEl);
+  sName.appendChild(stateEl);
+  pName.appendChild(phoneEl);
+  bestBrew.prepend(card);
+};
 
 
 function formSubmit(event) {
@@ -59,7 +88,7 @@ function formSubmit(event) {
     localStorage.setItem('City', citySearch);
     localStorage.setItem('Postal', postalSearch);
     localStorage.setItem('Type', typeSearch);
-  }
+};
 
 
 randomApi();
