@@ -19,7 +19,7 @@
 
     <header>
       <!-- Added Hero Img to the CSS Sheet -->
-      <nav id="home">
+      <nav class="home">
         <a href="#home">Home</a>
         <a href="#best-brew">Best Brew</a>
         <a href="#about-us">About Us</a>
@@ -63,7 +63,7 @@
             </form>
           </div>
         </div> 
-      <div class="col-3">
+      <div class="col-3 flexContainer">
         <aside class="spotlight">
           <div class="aside-container">
             <p class="tab">Brew Spotlight!</p>
@@ -82,12 +82,12 @@
       <article class="container-about-us">
         <!-- Added the content of About Us and our Mission -->
         <div class="row">
-          <img class="col-2" id="logo" src="./assets/images/brew-bound-logo-wbackground.png" alt="Brew Bound Logo" height="200px" width="200px"/>
-          <div class="col-9">
+          <img class="col-3" id="logo" src="./assets/images/brew-bound-logo-wbackground.png" alt="Brew Bound Logo" height="200px" width="200px"/>
+          <div class="col">
             <div class="about-us-content">
               <h4>About Us</h4> <br>
               <!-- This is the mission what what we care about most -->
-              <p>We are a start-up company that loves beer! We want to bring more people together into a
+              <p class="aboutusp">We are a start-up company that loves beer! We want to bring more people together into a
                 stronger community that shares that passion! <br> <br>
       
                 Breweries will have the opportunity to post their latest signature craft beers & ciders on our site to put
@@ -102,8 +102,8 @@
         </div>
       </article>
     </section>
-
-    <!-- created carousel container -->
+        
+        <!-- created carousel container -->
     <div id="carousel">
       <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -152,17 +152,18 @@
 
     </div>
 
+
+
     
-
-
-    <footer id="contact">
-      <nav>
-        </section>
+    <footer id="contactfooter">
+      <nav class="footertext">
+       <div id="linkstyling">
         <a href="#home">Home</a>
         <a href="#best-brew">Best Brew</a>
-        <div>&copy 2024 Created by Brittany, Kee, Maggie, Reynolds, and Tyler</div>
         <a href="#about-us">About Us</a>
         <a href="#contact">Contact</a>
+       </div>
+       <div class="copywrite">&copy 2024 Created by Brittany, Kee, Maggie, Reynolds, and Tyler</div>
       </nav> 
     </footer>
     

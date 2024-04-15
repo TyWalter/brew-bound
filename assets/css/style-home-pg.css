@@ -16,10 +16,19 @@
     background-position: center;
   }
 
+  .home {
+    text-decoration: none;
+    font-size: 25px;
+    text-align: left;
+    padding: 10px;
+    color: whitesmoke;
+  }
 
-  nav {
-    text-align: right;
-}
+  /* nav {
+    text-align: left;
+    color: #FBEE37;
+} */
+
 
 
 /* This is the Link styling for all links on the page. */
@@ -184,6 +193,7 @@ h4 {
 #cheers {
   font-size: 30px;
 }
+
 /* created a container for the carousel in a row */
 #carousel{
   display: flex;
@@ -199,4 +209,71 @@ h4 {
   border-color: #412708;
   border-style: solid;
 
+
 }
+
+
+#contactfooter {
+  background-color: var(--barn-red);
+  height: 150px;
+}
+
+.footertext {
+  font-size: 25px;
+  text-decoration: none;
+  color: #CD6305;
+  display: flex;
+  justify-content: center;
+}
+
+#linkstyling a {
+  text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+.col-3 {
+  display: flex;
+  margin-right: 100px;
+ }
+ .about-us-content {
+  display: block;
+ }
+ .col-9 {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ #logo {
+  margin-left: 25px;
+ }
+ /* #contact {
+  margin: 20px;
+ } */
+}
+
+
+@media screen and (max-width: 430px) {
+  .home {
+    font-size: 15px;
+  }
+  .placeholder-text select {
+    margin: 10px auto;
+    font-size: 10px;
+    &:focus, &:hover {
+      font-style: normal;
+      background-color: #dee1e4;
+      box-shadow: 0 0 .6rem .3rem var(--barn-red);
+    }
+  } 
+  #logo {
+    width: 200px;
+    position:relative;
+    margin-left: 125px;
+  }
+  .col-9 {
+    position: relative;
+    margin-left: 75px;
+  }
+
