@@ -110,4 +110,22 @@ nav {
 }
 
 
+.randomizer-btn {
+width: 300px;
+  display: flex;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  background-color: var(--barn-red);
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--brew-bound-logo);
+  position: absolute;
+  text-shadow: 1px 1px 5px black;
+  height: 150px;
+}
 
+#websiteLink {
+  text-decoration: none;
+}
