@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <!-- Meta Data-->
     <meta charset="UTF-8">
@@ -14,7 +13,6 @@
     <!-- Title of the page -->
     <title>Brew Bound</title>
   </head>
-
   <body>
     
     <header>
@@ -24,27 +22,76 @@
         <a href="./index.html#about-us">About Us</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="imageContainer">
+        <div class="imageCenterer">
+          <img src="./assets/images/results-hero-img.jpg" alt="'CRAFT' Neon Sign"/>
+        </div>
+      </div>
     </header>
     
     <main>
-
-      <aside id="results-text">
+      <div class="form-results-title">
         <p>
           <span>Here are your results for: </span>
         </p>
-      </aside>
+      </div>
 
-      <section id="drink-cards">
+      <div class="brickwall">
 
-      </section>
+        <section id="drink-cards">
+          The wood boards go here via JS
+        </section>
+      
+    
+        <section id="re-submit-form">
+          <div class="row justify-content-start">
+            <div class="col-5">
+              <div class="span6 offset3"
+                <div id="redo-search-title">
+                  <p>Not Finding what you are looking for? <br> Go another round!</p>
+                </div>
+                <form id="demo-form" data-parsley-validate="">
+                  <div class="placeholder-text">
+                    <label for="cname">City: </label>
+                    <input type="text" class="form-control" id="cname" name="cname" placeholder="City" required=""/>
+                  </div>
+                  <br>
+                  <div class="placeholder-text">
+                    <label for="zipcode">Zip Code: </label>
+                    <input type="number" class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code" data-parsley-type="number"/>
+                  </div> 
+                  <br>
+                  <div class="placeholder-text">
+                    <div class ="form-group">
+                      <label>Type of Brewery</label>
+                      <select class="form-control" id="type" required="">
+                        <option value="">Choose the type of brewery</option>
+                        <option value="Micro">Micro</option>
+                        <option value="Nano">Nano</option>
+                        <option value="Regional">Regional</option>
+                        <option value="Brewpub">Brewpub</option>
+                        <option value="Large">Large</option>
+                        <option value="Bar">Bar</option>
+                        <option value="Proprietor">Proprietor</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input id="submit" type="submit" value="Submit" class="btn"/>
+                </form>
+              </div>
+            </div>
+            
+            <div class="col-3"> 
+              <aside class="randomizer-btn">
+                <button>Its 5pm Somewhere!</button>
+              </aside>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
     </main>
-
-    <section id="re-submit-form">
-      <aside class="take-a-shot">
-  
-      </aside>
-    </section>
-
     <footer id="contact">
       <nav>
         </section>
@@ -65,6 +112,5 @@
     <script src="https://parsleyjs.org/dist/parsley.min.js"></script>
     <!-- JS script tag -->
     <script type="text/javascript" src="./assets/js/display-search.js"></script>
-
   </body>
 </html>
