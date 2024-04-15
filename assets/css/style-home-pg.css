@@ -9,16 +9,16 @@
 
 
 /* This is where the Hero Img is placed */
-  header {
-    background-image: url(../images/hero-img-unsplash.jpg);
-    height: 25rem;
-    background-size: cover;
-    background-position: center;
-  }
+header {
+  background-image: url(../images/hero-img-unsplash.jpg);
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
 
 
-  nav {
-    text-align: right;
+nav {
+  text-align: right;
 }
 
 
@@ -32,10 +32,10 @@ a{
 /* This is the background of the Main tag - this is the area behind the form in the event the image fails to load properly - that it has a color space to have to match the theme. */
 .form-background container {
   background-color: var(--kobicha);
-    display: flex;
-    margin: 50px;
-    height: 500px;
-    justify-content: space-between;
+  display: flex;
+  margin: 50px;
+  height: 500px;
+  justify-content: space-between;
 }
 
 
@@ -98,7 +98,6 @@ option:first-of-type {
   white-space: normal;
 }
 
-
 /* aside tag location to be on the right */
 .aside-container {
   display: flex;
@@ -114,31 +113,29 @@ option:first-of-type {
   position: relative;
 }
 
+.flexContainer {
+  display: flex
+}
 
 /* JS appended card for asisde section */
 #best-brew{
   display: flex;
   margin: 0 auto;
   color: var(--brew-bound-logo);
-  position: absolute;
-  top: 4rem;
+  position: relative;
+  top: 3rem;
 }
 
 .cEl, .sEl, .pEl {
   color: #644521; 
-  text-shadow: 1px 1px 15px black; 
-  text-align: left; 
   font-size: 12px;
-  position: relative;
   line-height: 1.75rem;
+  & .col-3 {
+    margin: 0 -.2rem;
+  }
 }
-
 
 /* buttons for brew spotlight */
-.col-3 {
-  display: flex
-}
-
 .spotlight {
   position: relative;
   align-content: center;
@@ -148,7 +145,7 @@ option:first-of-type {
   width: 80%;
   display: flex;
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px 0px;
   color: white;
   background-color: var(--barn-red);
   height: 30px;
@@ -167,7 +164,6 @@ option:first-of-type {
 .websiteLink {
   bottom: 1rem;
 }
-
 
 /* This is the About Us Section  */
 article.container-about-us {
