@@ -16,24 +16,26 @@ header {
   background-position: center;
 }
 
-  .home {
-    text-decoration: none;
-    font-size: 25px;
-    text-align: left;
-    padding: 10px;
-    color: whitesmoke;
+#home {
+  display: flex;
+  position: relative;
+  justify-content: left;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+#home a {
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  position: relative;
+  padding: 10px;
+  text-shadow: black 0 0 .3rem; 
+  &:hover {
+    color: var(--alloy-orange);
   }
-
-nav {
-  text-align: right;
 }
-
-/* This is the Link styling for all links on the page. */
-a{
-  color: var(--alloy-orange);
-  margin: 5px;
-}
-
 
 /* This is the background of the Main tag - this is the area behind the form in the event the image fails to load properly - that it has a color space to have to match the theme. */
 .form-background container {
@@ -198,21 +200,21 @@ h4 {
   margin-left: 35px;
 }
 
-/* shrinking the images */
-#carousel img{
-  max-width: 100%;
-  margin: auto;
-}
 /* The beer cheers emoji only */
 #cheers {
   font-size: 30px;
 }
+/* shrinking the images */
+/* #carousel img{
+  max-width: 100%;
+  margin: 0 auto;
+} */
 
 /* created a container for the carousel in a row */
 #carousel{
   display: flex;
   gap: 40px;
-  margin-left: 130px;
+  margin: 20px auto;
   margin-top: 20px;
 
 /* created the /border/colors usinf flex */
@@ -225,56 +227,36 @@ h4 {
 }
 
 #contactfooter {
-  display: flex;
-  padding-top: 40px;
-  flex-direction: row;
-  justify-content:flex-start;
   background-color: var(--barn-red);
   height: 150px;
-  align-items:center;
-  align-content: center;
-  background-color: var(--barn-red);
-  height: 150px;
+  border-top: 2px solid var(--brew-bound-logo);
+  margin-top: 20px;
 }
 
-/* .footertext {
-  font-size: 25px;
-  text-decoration: none;
-  color: #CD6305;
-  display: flex;
-  justify-content: center;
-} */
 
-/* link hover  */
-#linkstyling a:hover{
-  background-color: #f2f2f2;
-  color: #007bff;
-}
-
+/* link hover and styling  */
 #linkstyling a {
-  color: #dee1e4;
-  /* padding-left: 10px; */
   text-decoration: none;
-  margin-left: 6rem;
+  font-size: 1.25rem;
+  color: whitesmoke;
+  text-shadow: black 0 0 .3rem; 
+  padding: 10px;
+  &:hover {
+    color: var(--alloy-orange);
+  }
 }
 
 /*  footer logo */
 #footerlogo{
-  margin-right: 20x;
-  margin-top: -20px;
+  height: 150px;
+  width: 150px;
 }
 
 /* copywrite section */
-.copyright{
+.copywrite{
   color:rgb(246, 247, 249);
-  margin-left: 20rem;
-  margin-top: 2rem;
+  align-items: center;
 }
-/* .copywrite {
-  display: flex;
-  padding-top: 40px;
-  color:aliceblue;
-} */
 
 /* applying media query */
 @media screen and (max-width: 768px) {

@@ -28,154 +28,69 @@ function searchApi(citySearch, postalSearch, typeSearch){
 };
 
 
+function printDrink(drinkCard, width){
+  const widthPerc = `${width}%`;
+
+  const nameEl = document.createElement('h3');
+  nameEl.textContent = drinkCard.name;
+  nameEl.setAttribute('class', 'col');
+
+  const addressEl = document.createElement('p');
+  addressEl.textContent = drinkCard.address_1;
+  addressEl.setAttribute('class', 'col');
+
+  const postalEl = document.createElement('p');
+  postalEl.textContent = drinkCard.postal_code;
+  postalEl.setAttribute('class', 'col');
+
+  let formattedPhone = drinkCard.phone;
+  if(drinkCard.phone !== null){
+  const phoneEl = formattedPhone.split(''); 
+  phoneEl.splice(0, 0, '(')
+  phoneEl.splice(4, 0, ')')
+  phoneEl.splice(5, 0, ' ')
+  phoneEl.splice(9, 0, '-')
+  formattedPhone = phoneEl.join('');
+  } else {
+  formattedPhone = 'Unavailable'
+  }
+  const phoneEl = document.createElement('div');
+  phoneEl.textContent = formattedPhone;
+
+  const urlEl = document.createElement('a');
+  if(drinkCard.website_url !== null){
+    urlEl.setAttribute('href', drinkCard.website_url);
+    urlEl.textContent = '🍻 Visit Their Site 🍻'
+    urlEl.setAttribute('class', 'col')
+  } else{
+    urlEl.textContent = 'Unavailable'
+  }
+
+  const card = document.createElement('p');
+  card.setAttribute('style', `background-image: url(./assets/images/wood-plank-unsplash-small.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; display: inline-block; width: ${widthPerc}; text-align: center; padding: 20px; border-radius: 50px; margin: 10px 10px;`)
+
+  card
+    .appendChild(nameEl)
+    .appendChild(addressEl)
+    .appendChild(postalEl)
+    .appendChild(phoneEl)
+    .appendChild(urlEl);
+    
+  drinkCards.appendChild(card);
+}
+
+
 function printResults(data){
   for (let i=0; i<3; i++){
-    const drinkCard = data[i]
-
-    const nameEl = document.createElement('h3');
-    nameEl.textContent = drinkCard.name;
-    nameEl.setAttribute('class', 'col');
-
-    const addressEl = document.createElement('p');
-    addressEl.textContent = drinkCard.address_1;
-    addressEl.setAttribute('class', 'col');
-
-    const postalEl = document.createElement('p');
-    postalEl.textContent = drinkCard.postal_code;
-    postalEl.setAttribute('class', 'col');
-
-    let formattedPhone = drinkCard.phone;
-    if(drinkCard.phone !== null){
-    const phoneEl = formattedPhone.split(''); 
-    phoneEl.splice(0, 0, '(')
-    phoneEl.splice(4, 0, ')')
-    phoneEl.splice(5, 0, ' ')
-    phoneEl.splice(9, 0, '-')
-    formattedPhone = phoneEl.join('');
-    } else {
-    formattedPhone = 'Unavailable'
-    }
-    const phoneEl = document.createElement('div');
-    phoneEl.textContent = formattedPhone;
-
-    const urlEl = document.createElement('a');
-    if(drinkCard.website_url !== null){
-      urlEl.setAttribute('href', drinkCard.website_url);
-      urlEl.textContent = '🍻 Visit Their Site 🍻'
-      urlEl.setAttribute('class', 'col')
-    } else{
-      urlEl.textContent = 'Unavailable'
-    }
-
-    const card = document.createElement('p');
-    card.setAttribute('style', 'background-image: url(./assets/images/wood-plank-unsplash.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; display: inline-block; width: 32.2%; text-align: center; padding: 20px; border-radius: 50px; margin: 10px 10px;')
-
-    card.appendChild(nameEl);
-    card.appendChild(addressEl);
-    card.appendChild(postalEl);
-    card.appendChild(phoneEl);
-    card.appendChild(urlEl);
-    drinkCards.appendChild(card);
+    printDrink(data[i], 32.2)
   }
+
   for (let i=3; i<5; i++){
-    const drinkCard = data[i]
-
-    const nameEl = document.createElement('h3');
-    nameEl.textContent = drinkCard.name;
-    nameEl.setAttribute('class', 'col');
-
-    const addressEl = document.createElement('p');
-    if(drinkCard.address_1 !== null){
-      addressEl.textContent = drinkCard.address_1
-      addressEl.setAttribute('class', 'col')
-    } else{
-      addressEl.textContent = 'Unavailable'
-    }
-
-    const postalEl = document.createElement('p');
-    postalEl.textContent = drinkCard.postal_code;
-    postalEl.setAttribute('class', 'col');
-
-    let formattedPhone = drinkCard.phone;
-    if(drinkCard.phone !== null){
-    const phoneEl = formattedPhone.split(''); 
-    phoneEl.splice(0, 0, '(')
-    phoneEl.splice(4, 0, ')')
-    phoneEl.splice(5, 0, ' ')
-    phoneEl.splice(9, 0, '-')
-    formattedPhone = phoneEl.join('');
-    } else {
-    formattedPhone = 'Unavailable'
-    }
-    const phoneEl = document.createElement('div');
-    phoneEl.textContent = formattedPhone;
-
-    const urlEl = document.createElement('a');
-    if(drinkCard.website_url !== null){
-      urlEl.setAttribute('href', drinkCard.website_url);
-      urlEl.textContent = '🍻 Visit Their Site 🍻'
-      urlEl.setAttribute('class', 'col')
-    } else{
-      urlEl.textContent = 'Unavailable'
-    }
-
-    const card = document.createElement('p');
-    card.setAttribute('style', 'background-image: url(./assets/images/wood-plank-unsplash.jpg); background-size: 85%; background-repeat: no-repeat; background-position: center; display: inline-block; width: 50%; text-align: center; padding: 20px')
-
-    card.appendChild(nameEl);
-    card.appendChild(addressEl);
-    card.appendChild(postalEl);
-    card.appendChild(phoneEl);
-    card.appendChild(urlEl);
-    drinkCards.appendChild(card);
+    printDrink(data[i], 46)
   }
+
   for (let i=5; i<8; i++){
-    const drinkCard = data[i]
-
-    const nameEl = document.createElement('h3');
-    nameEl.textContent = drinkCard.name;
-    nameEl.setAttribute('class', 'col');
-
-    const addressEl = document.createElement('p');
-    addressEl.textContent = drinkCard.address_1;
-    addressEl.setAttribute('class', 'col');
-
-    const postalEl = document.createElement('p');
-    postalEl.textContent = drinkCard.postal_code;
-    postalEl.setAttribute('class', 'col');
-
-    let formattedPhone = drinkCard.phone;
-    if(drinkCard.phone !== null){
-    const phoneEl = formattedPhone.split(''); 
-    phoneEl.splice(0, 0, '(')
-    phoneEl.splice(4, 0, ')')
-    phoneEl.splice(5, 0, ' ')
-    phoneEl.splice(9, 0, '-')
-    formattedPhone = phoneEl.join('');
-    } else {
-    formattedPhone = 'Unavailable'
-    }
-    const phoneEl = document.createElement('div');
-    phoneEl.textContent = formattedPhone;
-
-    const urlEl = document.createElement('a');
-    if(drinkCard.website_url !== null){
-      urlEl.setAttribute('href', drinkCard.website_url);
-      urlEl.textContent = '🍻 Visit Their Site 🍻'
-      urlEl.setAttribute('style', 'font-size: 14px')
-    } else{
-      urlEl.textContent = 'Unavailable'
-    }
-
-    const card = document.createElement('p');
-    card.setAttribute('style', 'background-image: url(./assets/images/wood-plank-unsplash.jpg); background-size: 85%; background-repeat: no-repeat; background-position: center; display: inline-block; width: 33.33%; text-align: center; padding: 20px')
-
-    card.appendChild(nameEl);
-    card.appendChild(addressEl);
-    card.appendChild(postalEl);
-    card.appendChild(phoneEl);
-    card.appendChild(urlEl);
-    drinkCards.appendChild(card);
+    printDrink(data[i], 32.2)
   }
 }
 
