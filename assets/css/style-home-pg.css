@@ -256,20 +256,21 @@ h4 {
 
 /* applying media query */
 @media screen and (max-width: 768px) {
-.col-3 {
-  display: flex;
-  margin-right: 100px;
-}
-.about-us-content {
-  margin-top: 100px;
-  display: block;
-}
-.col-9 {
-  display: flex;
-  flex-wrap: wrap;
-}
-#logo {
-  margin-left: 25px;
+  .col-3 {
+    display: flex;
+    margin-right: 100px;
+  }
+  .about-us-content {
+    margin-top: 100px;
+    display: block;
+  }
+  .col-9 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #logo {
+    margin-left: 25px;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -291,3 +292,4 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
+}
