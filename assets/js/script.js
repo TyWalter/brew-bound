@@ -10,14 +10,14 @@ function randomApi(){
   const requestUrl = 'https://api.openbrewerydb.org/v1/breweries?per_page=200';
   fetch(requestUrl)
   .then(function (response){
+    // if( !response.ok ) throw new Error("Bad Request");
     return response.json();
   })
   .then(function(data){
     printRandom(data);
   })
-  .catch(function(error){
-    console.log(error);
-    alert('You done messed up, A-A-ron');
+  .catch(function(){
+    alert("You're Drunk Dumbass, Try Again");
   });
 };
 
@@ -41,9 +41,11 @@ function printRandom(data){
 
   let formattedPhone = random.phone;
   if(random.phone !== null){
-    const phoneNumber = formattedPhone.split('');
-    phoneNumber.splice(3, 0, '-')
-    phoneNumber.splice(7, 0, '-')
+    const phoneNumber = formattedPhone.split(''); 
+    phoneNumber.splice(0, 0, '(')
+    phoneNumber.splice(4, 0, ')')
+    phoneNumber.splice(5, 0, ' ')
+    phoneNumber.splice(9, 0, '-')
     formattedPhone = phoneNumber.join('');
   } else {
     formattedPhone = 'Unavailable'
@@ -60,11 +62,10 @@ function printRandom(data){
     siteLink.textContent = '🍻 Visit Their Site 🍻'
     siteLink.setAttribute('style', 'font-size: 14px')
   } else{
-    siteLink.textContent = '🍻 No site 🍻'
+    siteLink.textContent = 'Unavailable'
   }
 
   const card = document.createElement('p');
-  // siteLink.setAttribute('href', random.website_url);
 
   card.appendChild(nameEl);
   cName.appendChild(cityEl);

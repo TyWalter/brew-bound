@@ -9,34 +9,27 @@
 
 
 /* This is where the Hero Img is placed */
-  header {
-    background-image: url(../images/hero-img-unsplash.jpg);
-    height: 25rem;
-    background-size: cover;
-    background-position: center;
-  }
+header {
+  background-image: url(../images/hero-img-unsplash.jpg);
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
 
-  .home a {
-    margin-top: 10px;
+  .home {
     text-decoration: none;
     font-size: 25px;
-    text-align: right;
+    text-align: left;
     padding: 10px;
-    color: rgb(222, 208, 208);
+    color: whitesmoke;
   }
 
-
 nav {
-  text-align: center;
+  text-align: right;
 }
-/* nav:hover{
-  background-color: #f2f2f2;
-  color: #007bff;;
-} */
-
 
 /* This is the Link styling for all links on the page. */
-a {
+a{
   color: var(--alloy-orange);
   margin: 5px;
 }
@@ -45,10 +38,10 @@ a {
 /* This is the background of the Main tag - this is the area behind the form in the event the image fails to load properly - that it has a color space to have to match the theme. */
 .form-background container {
   background-color: var(--kobicha);
-    display: flex;
-    margin: 50px;
-    height: 500px;
-    justify-content: space-between;
+  display: flex;
+  margin: 50px;
+  height: 500px;
+  justify-content: space-between;
 }
 
 
@@ -110,7 +103,6 @@ option:first-of-type {
   flex-wrap: wrap;
   white-space: normal;
 }
-
 
 /* aside tag location to be on the right */
 .aside-container {
@@ -222,9 +214,6 @@ h4 {
   gap: 40px;
   margin-left: 130px;
   margin-top: 20px;
-  margin-bottom: 20px;
-  background-clip: border-box;
-
 
 /* created the /border/colors usinf flex */
 }
@@ -233,10 +222,6 @@ h4 {
   border-radius: 20px;
   border-color: #412708;
   border-style: solid;
-}
-/*noticable transition without .2s */
-.carousel-item {
-  transition-duration: .2s;
 }
 
 #contactfooter {
@@ -248,7 +233,17 @@ h4 {
   height: 150px;
   align-items:center;
   align-content: center;
+  background-color: var(--barn-red);
+  height: 150px;
 }
+
+/* .footertext {
+  font-size: 25px;
+  text-decoration: none;
+  color: #CD6305;
+  display: flex;
+  justify-content: center;
+} */
 
 /* link hover  */
 #linkstyling a:hover{
@@ -275,6 +270,11 @@ h4 {
   margin-left: 20rem;
   margin-top: 2rem;
 }
+/* .copywrite {
+  display: flex;
+  padding-top: 40px;
+  color:aliceblue;
+} */
 
 /* applying media query */
 @media screen and (max-width: 768px) {
@@ -282,7 +282,6 @@ h4 {
     display: flex;
     margin-right: 100px;
   }
-    
   .about-us-content {
     margin-top: 100px;
     display: block;
@@ -292,37 +291,28 @@ h4 {
     display: flex;
     flex-wrap: wrap;
   }
-
   #logo {
     margin-left: 25px;
   }
-  /* #contact {
-    margin: 20px;
-  } */
 }
-
 
 @media screen and (max-width: 430px) {
   .home {
     font-size: 15px;
   }
+  
   .placeholder-text select {
-    margin: 10px auto;
     font-size: 10px;
-    &:focus, &:hover {
-      font-style: normal;
-      background-color: #dee1e4;
-      box-shadow: 0 0 .6rem .3rem var(--barn-red);
-    }
   } 
+
   /* #logo {
     width: 200px;
     position:relative;
     margin-left: 125px;
   } */
+
   .col-9 {
     position: relative;
     margin-left: 75px;
   }
 }
-
