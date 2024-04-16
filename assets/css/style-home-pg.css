@@ -220,12 +220,20 @@ h4 {
   margin-left: 130px;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-clip: border-box;
+
 
 /* created the /border/colors usinf flex */
 }
 .carousel-inner{
   display:flex ;
   border-radius: 20px;
+  border-color: #412708;
+  border-style: solid;
+}
+/*noticable transition without .2s */
+.carousel-item {
+  transition-duration: .2s;
 }
 
 
@@ -282,6 +290,7 @@ h4 {
   .home {
     font-size: 15px;
   }
+}
   .placeholder-text select {
     margin: 10px auto;
     font-size: 10px;
@@ -300,4 +309,3 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
-}
