@@ -26,6 +26,15 @@
   }
 
 
+nav {
+  text-align: center;
+}
+/* nav:hover{
+  background-color: #f2f2f2;
+  color: #007bff;;
+} */
+
+
 /* This is the Link styling for all links on the page. */
 a {
   color: var(--alloy-orange);
@@ -195,6 +204,9 @@ h4 {
   gap: 40px;
   margin-left: 130px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  background-clip: border-box;
+
 
 /* created the /border/colors usinf flex */
 }
@@ -203,41 +215,54 @@ h4 {
   border-radius: 20px;
   border-color: #412708;
   border-style: solid;
-
-
+}
+/*noticable transition without .2s */
+.carousel-item {
+  transition-duration: .2s;
 }
 
 
 #contactfooter {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: row;
+  justify-content: center;
   background-color: var(--barn-red);
   height: 150px;
-  display: flex;
   align-content: center;
 }
 
-.footertext {
-  font-size: 20px;
+   
+  #linkstyling a {
+  color: #dee1e4;
+  padding-left: 10px;
   text-decoration: none;
-  color: #CD6305;
-  display: contents;
-  justify-content: center;
-}
+  }
+  #linkstyling a:hover{
+    background-color: #f2f2f2;
+    color: #007bff;;
+  }
+  
+  .copywrite {
+  display: flex;
+  padding-top: 40px;
+  color:aliceblue;
+  }
 
-#linkstyling a {
-  text-decoration: none;
-}
 
-
-
+/* applying media query */
 
 @media screen and (max-width: 768px) {
 .col-3 {
   display: flex;
   margin-right: 100px;
  }
+  
  .about-us-content {
-  display: block;
- }
+  margin-top: 100px;
+   display: block;
+}
+  
  .col-9 {
   display: flex;
   flex-wrap: wrap;
@@ -255,6 +280,7 @@ h4 {
   .home {
     font-size: 15px;
   }
+}
   .placeholder-text select {
     margin: 10px auto;
     font-size: 10px;
@@ -273,4 +299,7 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
+
+
+  
 
