@@ -65,6 +65,7 @@ Below is a Gif demonstrating the functionality of the web application.
 - JavaScript
    - Parsleyjs
    - baguetteBox.js
+   - JQuery
 
 <br>
 
