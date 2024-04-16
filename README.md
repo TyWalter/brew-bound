@@ -7,6 +7,8 @@ We have created a web application that helps the Public and Breweries to find ea
 
 Please take a look at our prototype at the bottom of this README and all feedback is welcome!
 
+Cheers! 🍻
+
 
 ## Group Project - Acceptance Criteria
 
@@ -33,6 +35,12 @@ Please take a look at our prototype at the bottom of this README and all feedbac
 
 - All group members must have frequent commits to the project. 
 
+- The README must be well organized:
+   - Project description
+   - Team Member List
+   - Screen Shots &/or Gifs of the Deployed Pages
+   - Link to deployed version on Github Pages
+
 ## Media Attachments
 
 Below is a screen shot of the Home Page and [other page name(s)].
@@ -40,7 +48,7 @@ Below is a screen shot of the Home Page and [other page name(s)].
 Below is a Gif demonstrating the functionality of the web application.
 
 
-## Our Company: 
+## Our Company: Syntaxic Suga Co.
 - Tyler Walter 
 - Maggie McDowell
 - Reynolds Addy
@@ -48,10 +56,36 @@ Below is a Gif demonstrating the functionality of the web application.
 - Brittany Junclaus
 
 ## Acknowledgements & Technology Stacks
-- (coming soon)
-- 
-- 
-- 
+- CSS
+   - Custom CSS
+   - Bootstrap
+
+<br>
+
+- JavaScript
+   - Parsleyjs
+   - baguetteBox.js
+
+<br>
+
+- APIs
+   - Open Brewery DB
+
+<br>
+
+- Misc Software
+   - Figma
+   - Windows Mark Up
+   - Excalidraw.com
+   - Colors.co
+   - Unsplash.com 
+
+<br>
+
+- Presentation Material
+   - Template: Slidesgo
+   - Icons: Flaticon
+   - Infografics & Images: Freepik
 
 
 
