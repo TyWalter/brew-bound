@@ -31,55 +31,57 @@
       <div class="form-background container">
         <div class="row justify-content-around">
           <div class="col-5">
-          <div class= "span6 offset3">
-            <h1>Fill out the form below to discover tasty new brews!</h1>
-            <form id="demo-form" data-parsley-validate="">
-              <div class="placeholder-text">
-                <label for="cname">City: </label>
-                <input type="text" class="form-control" id="cname" name="cname" placeholder="City" required=""/>
-              </div>
-              <br>
-              <div class="placeholder-text">
-                <label for="zipcode">Zip Code: </label>
-                <input type="number" class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code" data-parsley-type="number"/>
-              </div> 
-              <br>
-              <div class="placeholder-text">
-                <div class ="form-group">
-                  <select class="form-control" id="type" required="">
-                    <option value="">Choose the type of brewery</option>
-                    <option value="Micro">Micro</option>
-                    <option value="Nano">Nano</option>
-                    <option value="Regional">Regional</option>
-                    <option value="Brewpub">Brewpub</option>
-                    <option value="Large">Large</option>
-                    <option value="Bar">Bar</option>
-                    <option value="Proprietor">Proprietor</option>
-                  </select>
+            <div class= "span6 offset3">
+              <h1>Fill out the form below to discover tasty new brews!</h1>
+              <form id="demo-form" data-parsley-validate="">
+                <div class="placeholder-text">
+                  <label for="cname">City: </label>
+                  <input type="text" class="form-control" id="cname" name="cname" placeholder="City" required=""/>
                 </div>
-              </div>
-              <input id="submit" type="submit" value="Submit" class="btn"/>
-            </form>
-          </div>
-        </div> 
-      <div class="col-3 flexContainer">
-        <aside class="spotlight">
-          <div class="aside-container">
-            <div class="tab">Brew Spotlight!</div>
-            <div id="best-brew" class="row row-col-2">
-              <div class="cEl row">
-                <div class="col-3">City:</div>
-              </div>
-              <div class="sEl row">
-                <div class="col-3">State:</div>
-              </div>
-              <div class="pEl row">
-                <div class="col-3">Phone:</div>
-              </div>
+                <br>
+                <div class="placeholder-text">
+                  <label for="zipcode">Zip Code: </label>
+                  <input type="number" class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code" data-parsley-type="number"/>
+                </div> 
+                <br>
+                <div class="placeholder-text">
+                  <div class ="form-group">
+                    <select class="form-control" id="type" required="">
+                      <option value="">Choose the type of brewery</option>
+                      <option value="micro">Micro</option>
+                      <option value="nano">Nano</option>
+                      <option value="regional">Regional</option>
+                      <option value="brewpub">Brewpub</option>
+                      <option value="large">Large</option>
+                      <option value="bar">Bar</option>
+                      <option value="proprietor">Proprietor</option>
+                    </select>
+                  </div>
+                </div>
+                <input id="submit" type="submit" value="Submit" class="btn"/>
+              </form>
             </div>
-            <a class="websiteLink"></a>
+          </div> 
+          <div class="col-3 flexContainer">
+            <aside class="spotlight">
+              <div class="aside-container">
+                <div class="tab">Brew Spotlight!</div>
+                <div id="best-brew" class="row row-col-2">
+                  <div class="cEl row">
+                    <div class="col-3">City:</div>
+                  </div>
+                  <div class="sEl row">
+                    <div class="col-3">State:</div>
+                  </div>
+                  <div class="pEl row">
+                    <div class="col-3">Phone:</div>
+                  </div>
+                </div>
+                <a class="websiteLink"></a>
+              </div>
+            </aside>
           </div>
-        </aside>
+        </div>
       </div>
     </main>
 
