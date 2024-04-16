@@ -1,27 +1,25 @@
 const formSel = document.querySelector('#form-selection');
 const resultTextEl = document.querySelector('#result-text');
+const drinkCards = document.querySelector('#drink-cards');
 
 
 function getParams(){
-  const nameEl = localStorage.getItem('name');
-  const cityEl = localStorage.getItem('city');
-  const postalEl = localStorage.getItem('postal');
-  const typeEl = localStorage.getItem('type');
-
-  resultTextEl.textContent = `${cityEl}`;
-
-  searchApi(nameEl, cityEl, postalEl, typeEl);
+  const cityEl = localStorage.getItem('City');
+  const postalEl = localStorage.getItem('Postal');
+  const typeEl = localStorage.getItem('Type');
+  
+  searchApi(cityEl, postalEl, typeEl);
 }
 
 
-function searchApi(nameSearch, citySearch, postalSearch, typeSearch){
-  const requestUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySearch}&by_name=${nameSearch}&by_postal=${postalSearch}&by_type=${typeSearch}&per_page=10`;
+function searchApi(cityEl, postalEl, typeEl){
+  const requestUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${cityEl}&by_postal=${postalEl}&by_type=${typeEl}&per_page=8`;
   fetch(requestUrl)
   .then(function (response){
     return response.json();
   })
   .then(function(data){
-    console.log(data);
+    printResults(data);
   })
   .catch(function(error){
     console.log(error);
@@ -32,19 +30,30 @@ function searchApi(nameSearch, citySearch, postalSearch, typeSearch){
 
 function printResults(data){
   for (let i=0; i<data.length; i++){
-    const article = data[i]
-    const titleEl = document.createElement('h3')
-    titleEl.textContent = article.title
-    const descEl = document.createElement('p')
-    descEl.textContent = article.description
+    const drinkCard = data[i]
+    const nameEl = document.createElement('h3')
+    nameEl.textContent = drinkCard.name
+
+    const addressEl = document.createElement('p')
+    addressEl.textContent = drinkCard.address_1
+
+    const postalEl = document.createElement('p')
+    postalEl.textContent = drinkCard.postal_code
+
+    const phoneEl = document.createElement('p')
+    phoneEl.textContent = drinkCard.phone
+
     const urlEl = document.createElement('a')
     urlEl.textContent = 'Read More'
-    urlEl.setAttribute('href', article.url)
+    urlEl.setAttribute('href', drinkCard.url)
+
     const card = document.createElement('div')
-    card.appendChild(titleEl)
-    card.appendChild(descEl)
+    card.appendChild(nameEl)
+    card.appendChild(addressEl)
+    card.appendChild(postalEl)
+    card.appendChild(phoneEl)
     card.appendChild(urlEl)
-    resultContentEl.appendChild(card)
+    drinkCards.appendChild(card)
   }
 }
 
@@ -68,6 +77,6 @@ function formSubmit(event) {
   }
 
 
-formSel.addEventListener('submit', formSubmit);
+// formSel.addEventListener('submit', formSubmit);
 
 getParams();

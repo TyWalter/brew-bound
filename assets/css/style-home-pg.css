@@ -112,53 +112,72 @@ option:first-of-type {
 }
 
 
-/* title on top of the side bar */
-.tab {
-  display: flex;
-    border-radius: 30px 30px 30px 30px;
-    padding: 20px;
-  color: white;
-  background-color: var(--barn-red);
-  width:198px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/* JS appended card for asisde section */
-#best-brew{
-  display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
-  color: var(--brew-bound-logo)
-}
-
-
 /* aside tag location to be on the right */
 .aside-container {
   display: flex;
   background-color: #ffd9ab;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 20px;
   flex-direction: column;
   width: 200px;
-  height: 400px;
+  height: 300px;
   flex-wrap: wrap;
   align-items: center;
   padding-top: 20px;
-  border: 2px #412708;
+  border: 2px solid #412708;
+  position: relative;
 }
 
-
-/* aside button */
-button {
-  border-radius: 20px;
-  background-color: #2d0d4a;
-  color: #f1f2f4;
-  width: 100px;
+.flexContainer {
+  display: flex
 }
 
+/* JS appended card for asisde section */
+#best-brew{
+  display: flex;
+  margin: 0 auto;
+  color: var(--brew-bound-logo);
+  position: relative;
+  top: 3rem;
+}
 
+.cEl, .sEl, .pEl {
+  color: #644521; 
+  font-size: 12px;
+  line-height: 1.75rem;
+  & .col-3 {
+    margin: 0 -.2rem;
+  }
+}
+
+/* buttons for brew spotlight */
+.spotlight {
+  position: relative;
+  align-content: center;
+}
+
+.tab, .websiteLink {
+  width: 80%;
+  display: flex;
+  border-radius: 15px;
+  padding: 20px 0px;
+  color: white;
+  background-color: var(--barn-red);
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--brew-bound-logo);
+  position: absolute;
+  text-decoration: none;
+  text-shadow: 1px 1px 5px black;
+}
+
+.tab {
+  top: 1rem;
+}
+
+.websiteLink {
+  bottom: 1rem;
+}
 
 /* This is the About Us Section  */
 article.container-about-us {
@@ -172,7 +191,6 @@ article.container-about-us {
   margin: center;
   text-wrap: wrap;
 }
-
 
 h4 {
   color: var(--alloy-orange);
@@ -221,7 +239,6 @@ h4 {
   transition-duration: .2s;
 }
 
-
 #contactfooter {
   display: flex;
   padding-top: 40px;
@@ -232,47 +249,46 @@ h4 {
   align-content: center;
 }
 
-   
-  #linkstyling a {
+#linkstyling a {
   color: #dee1e4;
   padding-left: 10px;
   text-decoration: none;
-  }
-  #linkstyling a:hover{
-    background-color: #f2f2f2;
-    color: #007bff;;
-  }
+}
+
+#linkstyling a:hover{
+  background-color: #f2f2f2;
+  color: #007bff;;
+}
   
-  .copywrite {
+.copywrite {
   display: flex;
   padding-top: 40px;
   color:aliceblue;
-  }
-
+}
 
 /* applying media query */
-
 @media screen and (max-width: 768px) {
-.col-3 {
-  display: flex;
-  margin-right: 100px;
- }
-  
- .about-us-content {
-  margin-top: 100px;
-   display: block;
-}
-  
- .col-9 {
-  display: flex;
-  flex-wrap: wrap;
- }
- #logo {
-  margin-left: 25px;
- }
- /* #contact {
-  margin: 20px;
- } */
+  .col-3 {
+    display: flex;
+    margin-right: 100px;
+  }
+    
+  .about-us-content {
+    margin-top: 100px;
+    display: block;
+  }
+    
+  .col-9 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #logo {
+    margin-left: 25px;
+  }
+  /* #contact {
+    margin: 20px;
+  } */
 }
 
 
@@ -280,7 +296,6 @@ h4 {
   .home {
     font-size: 15px;
   }
-}
   .placeholder-text select {
     margin: 10px auto;
     font-size: 10px;
@@ -299,7 +314,5 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
-
-
-  
+}
 
