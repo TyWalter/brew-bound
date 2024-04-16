@@ -25,12 +25,12 @@ header {
   }
 
 nav {
-  text-align: right;
+  text-align: center;
 }
-nav:hover{
+/* nav:hover{
   background-color: #f2f2f2;
   color: #007bff;;
-}
+} */
 
 /* This is the Link styling for all links on the page. */
 a{
