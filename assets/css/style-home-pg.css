@@ -9,20 +9,22 @@
 
 
 /* This is where the Hero Img is placed */
-header {
-  background-image: url(../images/hero-img-unsplash.jpg);
-  height: 25rem;
-  background-size: cover;
-  background-position: center;
-}
+  header {
+    background-image: url(../images/hero-img-unsplash.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-position: center;
+  }
 
-  .home {
+  .home a {
+    margin-top: 10px;
     text-decoration: none;
     font-size: 25px;
-    text-align: left;
+    text-align: right;
     padding: 10px;
-    color: whitesmoke;
+    color: rgb(222, 208, 208);
   }
+
 
 nav {
   text-align: center;
@@ -32,8 +34,9 @@ nav {
   color: #007bff;;
 } */
 
+
 /* This is the Link styling for all links on the page. */
-a{
+a {
   color: var(--alloy-orange);
   margin: 5px;
 }
@@ -42,10 +45,10 @@ a{
 /* This is the background of the Main tag - this is the area behind the form in the event the image fails to load properly - that it has a color space to have to match the theme. */
 .form-background container {
   background-color: var(--kobicha);
-  display: flex;
-  margin: 50px;
-  height: 500px;
-  justify-content: space-between;
+    display: flex;
+    margin: 50px;
+    height: 500px;
+    justify-content: space-between;
 }
 
 
@@ -108,72 +111,54 @@ option:first-of-type {
   white-space: normal;
 }
 
-/* aside tag location to be on the right */
-.aside-container {
+
+/* title on top of the side bar */
+.tab {
   display: flex;
-  background-color: #ffd9ab;
-  border-radius: 20px;
-  flex-direction: column;
-  width: 200px;
-  height: 300px;
-  flex-wrap: wrap;
+    border-radius: 30px 30px 30px 30px;
+    padding: 20px;
+  color: white;
+  background-color: var(--barn-red);
+  width:198px;
+  height: 30px;
+  justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  border: 2px solid #412708;
-  position: relative;
 }
 
-.flexContainer {
-  display: flex
-}
 
 /* JS appended card for asisde section */
 #best-brew{
   display: flex;
-  margin: 0 auto;
-  color: var(--brew-bound-logo);
-  position: relative;
-  top: 3rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--brew-bound-logo)
 }
 
-.cEl, .sEl, .pEl {
-  color: #644521; 
-  font-size: 12px;
-  line-height: 1.75rem;
-  & .col-3 {
-    margin: 0 -.2rem;
-  }
-}
 
-/* buttons for brew spotlight */
-.spotlight {
-  position: relative;
-  align-content: center;
-}
-
-.tab, .websiteLink {
-  width: 80%;
+/* aside tag location to be on the right */
+.aside-container {
   display: flex;
-  border-radius: 15px;
-  padding: 20px 0px;
-  color: white;
-  background-color: var(--barn-red);
-  height: 30px;
-  justify-content: center;
+  background-color: #ffd9ab;
+  border-radius: 30px 30px 30px 30px;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  flex-wrap: wrap;
   align-items: center;
-  border: 2px solid var(--brew-bound-logo);
-  position: absolute;
-  text-decoration: none;
-  text-shadow: 1px 1px 5px black;
+  padding-top: 20px;
+  border: 2px #412708;
 }
 
-.tab {
-  top: 1rem;
+
+/* aside button */
+button {
+  border-radius: 20px;
+  background-color: #2d0d4a;
+  color: #f1f2f4;
+  width: 100px;
 }
 
-.websiteLink {
-  bottom: 1rem;
-}
+
 
 /* This is the About Us Section  */
 article.container-about-us {
@@ -244,8 +229,10 @@ h4 {
   justify-content: center;
   background-color: var(--barn-red);
   height: 150px;
-  }
-  
+  align-content: center;
+}
+
+   
   #linkstyling a {
   color: #dee1e4;
   padding-left: 10px;
@@ -268,19 +255,22 @@ h4 {
 @media screen and (max-width: 768px) {
 .col-3 {
   display: flex;
+  margin-right: 100px;
+ }
+  
+ .about-us-content {
   margin-top: 100px;
+   display: block;
 }
-.about-us-content {
-  display: block;
-}
-.col-9 {
+  
+ .col-9 {
   display: flex;
   flex-wrap: wrap;
-}
-#logo {
+ }
+ #logo {
   margin-left: 25px;
-}
-/* #contact {
+ }
+ /* #contact {
   margin: 20px;
  } */
 }
@@ -309,3 +299,7 @@ h4 {
     position: relative;
     margin-left: 75px;
   }
+
+
+  
+
