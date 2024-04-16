@@ -27,6 +27,10 @@ header {
 nav {
   text-align: right;
 }
+nav:hover{
+  background-color: #f2f2f2;
+  color: #007bff;;
+}
 
 /* This is the Link styling for all links on the page. */
 a{
@@ -215,43 +219,48 @@ h4 {
   gap: 40px;
   margin-left: 130px;
   margin-top: 20px;
+  margin-bottom: 20px;
 
 /* created the /border/colors usinf flex */
 }
 .carousel-inner{
   display:flex ;
   border-radius: 20px;
-  border-color: #412708;
-  border-style: solid;
-
-
 }
 
 
 #contactfooter {
+  display: flex;
+  padding-top: 40px;
+  flex-direction: row;
+  justify-content: center;
   background-color: var(--barn-red);
   height: 150px;
-}
-
-.footertext {
-  font-size: 25px;
+  }
+  
+  #linkstyling a {
+  color: #dee1e4;
+  padding-left: 10px;
   text-decoration: none;
-  color: #CD6305;
+  }
+  #linkstyling a:hover{
+    background-color: #f2f2f2;
+    color: #007bff;;
+  }
+  
+  .copywrite {
   display: flex;
-  justify-content: center;
-}
-
-#linkstyling a {
-  text-decoration: none;
-}
+  padding-top: 40px;
+  color:aliceblue;
+  }
 
 
-
+/* applying media query */
 
 @media screen and (max-width: 768px) {
 .col-3 {
   display: flex;
-  margin-right: 100px;
+  margin-top: 100px;
 }
 .about-us-content {
   display: block;
