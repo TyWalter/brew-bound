@@ -100,6 +100,10 @@ option:first-of-type {
   background-color: var(--barn-red);
 }
 
+#submit:hover{
+    color: var(--alloy-orange);
+}
+
 .dropdown-toggle {
   margin: 10px;
   flex-wrap: wrap;
@@ -171,6 +175,10 @@ option:first-of-type {
 
 .websiteLink {
   bottom: 1rem;
+}
+
+.websiteLink:hover{
+    color: var(--alloy-orange);
 }
 
 /* This is the About Us Section  */
