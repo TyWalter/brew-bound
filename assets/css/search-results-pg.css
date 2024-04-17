@@ -36,13 +36,14 @@ header {
 #home {
   display: flex;
   position: relative;
-  justify-content: center;
-  gap: 50px;
+  justify-content: left;
+  margin-left: 20px;
+  padding-top: 5px;
 }
 
 #home a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-align: center;
   color: whitesmoke;
   position: relative;
@@ -194,7 +195,6 @@ width: 300px;
   height: 150px;
   border-top: 5px solid var(--brew-bound-logo);
 }
-
 
 /* link hover and styling  */
 #linkstyling a {
