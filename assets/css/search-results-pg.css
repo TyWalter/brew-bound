@@ -26,10 +26,29 @@
   transform: translateY(-45%);
 }
 
-#home {
-  display: flex;
-  margin-top: 50px;
-  text-align: center;
+#home  {
+  text-decoration: none;
+   font-size: 1rem;
+   text-align: left;
+   color: whitesmoke;
+   position: relative;
+   padding: 10px;
+   text-shadow: black 0 0 .3rem; 
+   &:hover {
+     color: #CD6305;
+   }
+}
+
+/* link hover and styling  */
+#linkstyling a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: whitesmoke;
+  text-shadow: black 0 0 .3rem;
+  padding: 10px; 
+  &:hover {
+    color: var(--alloy-orange);
+  }
 }
 
 .form-results-title {
@@ -224,18 +243,6 @@ width: 300px;
   border-top: 5px solid var(--brew-bound-logo);
 }
 
-
-/* link hover and styling  */
-#linkstyling a {
-  text-decoration: none;
-  font-size: 1.25rem;
-  color: whitesmoke;
-  text-shadow: black 0 0 .3rem;
-  padding: 10px; 
-  &:hover {
-    color: var(--alloy-orange);
-  }
-}
 
 /*  footer logo */
 #footerlogo{
