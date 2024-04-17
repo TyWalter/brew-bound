@@ -1,6 +1,6 @@
 
 #woodbackground {
-   background-image: url(../images/wood-backdrop-unsplash.small.jpg);
+   background-image: url(../images/wood-backdrop-unsplash-small.jpg);
    background-size: cover;
    display: flex;
    justify-content: center;
@@ -24,7 +24,6 @@
 }
 
 .welcome {
-   position: relative;
    color: antiquewhite;
    position: absolute;
    margin-top: 90px;
@@ -47,19 +46,18 @@
    }
 }
 
-
+div.gallery img{
+   width: 300px;
+   height: 300px;
+}
 
 div.gallery {
    border: 3px solid #ccc;
+   display: ruby-text;
  }
  
  div.gallery:hover {
    border: 1px solid #777;
- }
- 
- div.gallery img {
-   width: 100%;
-   height: auto;
  }
  
  div.desc {
@@ -72,19 +70,71 @@ div.gallery {
  }
  
  .responsive {
-   padding: 0 6px;
+   width: 100%;
+   height: 100%;
+   padding-top: 15px;
+   padding-inline: 15px;
    float: left;
    width: 24.99999%;
  }
  
  .bottomp {
    color: antiquewhite;
+   font-size: 40px;
+   position: relative;
+   text-align-last: center;
+   padding:10px;
  }
 
- #footer {
+ #contactfooter {
    background-color: #770A05;
    height: 150px;
-}
+   border-top: 2px solid var(--brew-bound-logo);
+   margin-top: 20px;
+ }
+
+ #linkstyling a {
+   text-decoration: none;
+   font-size: 1.25rem;
+   color: antiquewhite;
+   text-shadow: black 0 0 .3rem;
+   padding: 10px; 
+   &:hover {
+     color: #CD6305;
+   }
+ }
+ 
+ /*  footer logo */
+ #footerlogo{
+   height: 150px;
+   width: 150px;
+ }
+ 
+ /* copywrite section */
+ .copywrite{
+   color: antiquewhite;
+   align-items: center;
+ }
+
+ @media only screen and (max-width: 1363px) {
+   .responsive {
+      width: 100%;
+      height: 100%;
+      padding-top: 15px;
+      padding-inline: 15px;
+      float: left;
+      width: 50%;
+   }
+ }
+
+ @media only screen and (max-width: 850px){
+   .responsive {
+      padding-top: 15px;
+      padding-inline: 15px;
+      float: left;
+      width: 45%;
+   }
+ }
 
  @media only screen and (max-width: 700px) {
    .responsive {
@@ -95,12 +145,33 @@ div.gallery {
  
  @media only screen and (max-width: 500px) {
    .responsive {
-     width: 100%;
+     width: 75%;
+     height: 75%;
+     display: table;
+     margin-left: 45px;
    }
+ }
+
+ .bottomp {
+   color: antiquewhite;
+   font-size: 20px;
+   position: relative;
+   text-align-last: center;
+   padding:10px;
  }
  
  .clearfix:after {
    content: "";
    display: table;
    clear: both;
+ }
+
+ #linkstyling a {
+   text-decoration: none;
+   font-size: 1rem;
+   color: antiquewhite;
+   text-shadow: black 0 0 .3rem;
+   &:hover {
+     color: #CD6305;
+   }
  }
