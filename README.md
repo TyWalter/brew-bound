@@ -75,7 +75,6 @@ The Presentation.
 
 - JavaScript
    - Parsleyjs
-   - baguetteBox.js
    - JQuery
 
 <br>
