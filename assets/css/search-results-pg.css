@@ -53,6 +53,7 @@ header {
   }
 }
 
+}
 .form-results-title {
   width: 100%;
   display: flex;
@@ -162,6 +163,10 @@ option:first-of-type {
   background-color: var(--barn-red);
 }
 
+#submit:hover {
+    color: var(--alloy-orange);
+  }
+
 .dropdown-toggle {
   margin: 10px;
   flex-wrap: wrap;
@@ -217,10 +222,6 @@ width: 300px;
   align-items: center;
 }
 
-
 #websiteLink {
   text-decoration: none;
 }
-
-
-
