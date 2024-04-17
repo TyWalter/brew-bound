@@ -43,12 +43,14 @@ Cheers! 🍻
 
 ## Media Attachments
 
-Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Gallery. 
-![](home-pg-screenshot)
-![](mobile-screenshot)
+![Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Gallery.](./assets/images/home-pg-screenshot.png)
+![](./assets/images/mobile-screenshot.png)
 
-![]()
-![]()
+![The Results Page.](./assets/images/results-screenshot.png)
+
+![The Gallery Page.](./assets/images/gallery-screenshot.png)
+
+![The Company Logo.](./assets/images/suga.png)
 
 
 
