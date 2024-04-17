@@ -43,16 +43,21 @@ Cheers! 🍻
 
 ## Media Attachments
 
+Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Gallery.
 ![Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Gallery.](./assets/images/home-pg-screenshot.png)
 ![](./assets/images/mobile-screenshot.png)
 
+The Results Page.
 ![The Results Page.](./assets/images/results-screenshot.png)
 
+The Gallery Page.
 ![The Gallery Page.](./assets/images/gallery-screenshot.png)
 
+The Company Logo.
 ![The Company Logo.](./assets/images/suga.png)
 
-
+The Presentation.
+![The Presentation.](https://docs.google.com/presentation/d/1dl8SZWsLcAAwg6KGqU1BPsAire65AYY-4dU5z-Y0A5s/edit?usp=sharing)
 
 ## Our Company: Syntaxic Suga Co.
 - Tyler Walter 
