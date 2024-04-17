@@ -28,10 +28,26 @@
 
 #home {
   display: flex;
-  margin-top: 50px;
-  text-align: center;
+
+  margin-left: 20px;
+  padding-top: 10px;
+  text-align: right;
+  position:absolute;
+  top:0;
 }
 
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  color: whitesmoke;
+  position: relative;
+  padding: 10px;
+  text-shadow: black 0 0 .3rem; 
+  &:hover {
+    color: var(--alloy-orange);
+  }
+}
 .form-results-title {
   width: 100%;
   display: flex;
@@ -194,6 +210,10 @@ option:first-of-type {
   margin: 30px auto;
   background-color: var(--barn-red);
 }
+
+#submit:hover {
+    color: var(--alloy-orange);
+  }
 
 .dropdown-toggle {
   margin: 10px;
