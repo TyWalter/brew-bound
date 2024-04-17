@@ -57,7 +57,7 @@ The Company Logo.
 ![The Company Logo.](./assets/images/suga.png)
 
 The Presentation.
-[Click Here](https://docs.google.com/presentation/d/1dl8SZWsLcAAwg6KGqU1BPsAire65AYY-4dU5z-Y0A5s/edit?usp=sharing)
+[Click Here](https://docs.google.com/presentation/d/1dl8SZWsLcAAwg6KGqU1BPsAire65AYY-4dU5z-Y0A5s/edit?usp=sharing) 
 
 ## Our Company: Syntaxic Suga Co.
 - Tyler Walter 
