@@ -29,27 +29,26 @@ function searchApi(citySearch, postalSearch, typeSearch){
 };
 
 
+function printResults(data){
+  for (let i=0; i<data.length; i++){
+    printDrink(data[i])
+  }
+}
+
+
 function printDrink(drinkCard){
+  if (!drinkCard || !drinkCard.name || !drinkCard.address_1 || !drinkCard.postal_code || !drinkCard.phone || !drinkCard.website_url) {
+    return;
+  }
   const nameEl = document.createElement('h3');
   nameEl.textContent = drinkCard.name;
-  console.log(drinkCard.name)
   
-
-
   const addressEl = document.createElement('p');
   addressEl.textContent = drinkCard.address_1;
 
-  // let givenPostal = localStorage.getItem('Postal');
   let longPostal = drinkCard.postal_code;
-  // let gPost = givenPostal.toString();
   let lPost = longPostal.toString();
-  // const gPost5 = gPost.substring(0, 5);
   const lPost5 = lPost.substring(0, 5);
-  // if(gPost5 === lPost5){
-  //   return true
-  // } else {
-  //   console.log("The first 5 digits don't match")
-  // }
   const postalEl = document.createElement('p');
   postalEl.textContent = lPost5;
   
@@ -78,7 +77,6 @@ function printDrink(drinkCard){
 
   const card = document.createElement('p');
 
-
   card
     .appendChild(nameEl) 
     .appendChild(addressEl)
@@ -90,41 +88,24 @@ function printDrink(drinkCard){
 }
 
 
-function printResults(data){
-  for (let i=0; i<3; i++){
-    printDrink(data[i])
-  }
+function formSubmitPage2(event) {
+  event.preventDefault();
 
-  for (let i=3; i<5; i++){
-    printDrink(data[i])
-  }
+  const citySearch = document.querySelector('#cname').value;
+  const postalSearch = document.querySelector('#zipcode').value;
+  const typeSearch = document.querySelector('#type').value;
 
-  for (let i=5; i<8; i++){
-    printDrink(data[i])
-  }
-}
+  if (!typeSearch) {
+    console.error('You need to select a type of brewery!');
+    return;
+  } document.location.assign('search-results.html');
+    localStorage.setItem('City', citySearch);
+    localStorage.setItem('Postal', postalSearch);
+    localStorage.setItem('Type', typeSearch);
+};
+
 
 getParams();
-// function formSubmit(event) {
-//   event.preventDefault();
-
-//   const nameSearch = document.querySelector('#xxxxx').value;
-//   const citySearch = document.querySelector('#xxxxx').value;
-//   const postalSearch = document.querySelector('#xxxxx').value;
-//   const typeSearch = document.querySelector('#xxxxx').value;
-
-//   if (!citySearch) {
-//     console.error('You need to enter a city!');
-//     return;
-//   } 
-//   document.location.assign('search-results.html');
-//   localStorage.setItem('Name', nameSearch);
-//   localStorage.setItem('City', citySearch);
-//   localStorage.setItem('Postal', postalSearch);
-//   localStorage.setItem('Type', typeSearch);
-// }
 
 
-// formSel.addEventListener('submit', formSubmit);
-
-// getParams();
+formSel.addEventListener('submit', formSubmitPage2);
