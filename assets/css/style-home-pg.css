@@ -26,7 +26,7 @@ header {
 
 #home a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   color: whitesmoke;
   position: relative;
@@ -224,7 +224,6 @@ h4 {
   gap: 40px;
   margin: 20px auto;
   margin-top: 20px;
-  margin-left: 100px;
 
 /* created the /border/colors usinf flex */
 }
@@ -248,8 +247,8 @@ h4 {
   text-decoration: none;
   font-size: 1.25rem;
   color: whitesmoke;
-  text-shadow: black 0 0 .3rem;
-  padding: 10px; 
+  text-shadow: black 0 0 .3rem; 
+  padding: 10px;
   &:hover {
     color: var(--alloy-orange);
   }
