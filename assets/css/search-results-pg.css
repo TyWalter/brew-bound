@@ -26,14 +26,14 @@
   transform: translateY(-45%);
 }
 
-nav {
+#home {
   display: flex;
+
   margin-left: 20px;
   padding-top: 10px;
   text-align: right;
   position:absolute;
   top:0;
-  
 }
 
 nav a {
@@ -267,10 +267,6 @@ width: 300px;
 .copywrite{
   color:rgb(246, 247, 249);
   align-items: center;
-}
-
-nav{
-  text-align: center;
 }
 
 #websiteLink {
