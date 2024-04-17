@@ -26,11 +26,13 @@
 .welcome {
    color: antiquewhite;
    position: absolute;
-   margin-top: 90px;
+   margin-top: 70px;
 }
 
 .sendphotos {
    padding: 20px;
+   position: relative;
+   margin-left: 40px;
 }
 
 .home a {
@@ -140,6 +142,9 @@ div.gallery {
    .responsive {
      width: 49.99999%;
      margin: 6px 0;
+   }
+   .sendphotos {
+      font-size: 20px;
    }
  }
  
