@@ -1,11 +1,12 @@
 
 #woodbackground {
-   background-image: url(../images/wood-backdrop-unsplash.jpg);
+   background-image: url(../images/wood-backdrop-unsplash.small.jpg);
    background-size: cover;
    display: flex;
    justify-content: center;
    align-items: flex-start;
    color: antiquewhite;
+   height: 150px;
 }
 
 #brickwall h2 {
@@ -22,10 +23,34 @@
   border-top: solid 3px var(--brew-bound-logo);
 }
 
+.welcome {
+   position: relative;
+   color: antiquewhite;
+   position: absolute;
+   margin-top: 90px;
+}
+
+.sendphotos {
+   padding: 20px;
+}
+
+.home a {
+   text-decoration: none;
+   font-size: 1rem;
+   text-align: left;
+   color: whitesmoke;
+   position: relative;
+   padding: 10px;
+   text-shadow: black 0 0 .3rem; 
+   &:hover {
+     color: #CD6305;
+   }
+}
+
 
 
 div.gallery {
-   border: 1px solid #ccc;
+   border: 3px solid #ccc;
  }
  
  div.gallery:hover {
