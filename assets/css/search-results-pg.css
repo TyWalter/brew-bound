@@ -36,8 +36,9 @@ header {
 #home {
   display: flex;
   position: relative;
-  justify-content: center;
-  gap: 50px;
+  justify-content: left;
+  margin-left: 20px;
+  padding-top: 5px;
 }
 
 #home a {

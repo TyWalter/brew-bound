@@ -21,7 +21,7 @@ header {
   position: relative;
   justify-content: left;
   margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #home a {
@@ -221,6 +221,7 @@ h4 {
 /* created a container for the carousel in a row */
 #carousel{
   display: flex;
+  justify-content: center;
   gap: 40px;
   margin: 20px auto;
   margin-top: 20px;
