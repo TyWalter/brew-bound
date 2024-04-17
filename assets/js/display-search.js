@@ -1,4 +1,4 @@
-const formSel = document.querySelector('#form-selection');
+const formSel = document.querySelector('.brickwall');
 const resultTextEl = document.querySelector('#result-text');
 const drinkCards = document.querySelector('#drink-cards');
 
@@ -88,7 +88,7 @@ function printDrink(drinkCard){
 }
 
 
-function formSubmitPage2(event) {
+function formSubmit(event) {
   event.preventDefault();
 
   const citySearch = document.querySelector('#cname').value;
@@ -104,8 +104,8 @@ function formSubmitPage2(event) {
     localStorage.setItem('Type', typeSearch);
 };
 
+formSel.addEventListener('submit', formSubmit);
+
 
 getParams();
 
-
-formSel.addEventListener('submit', formSubmitPage2);
