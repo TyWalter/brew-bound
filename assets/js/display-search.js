@@ -22,55 +22,65 @@ function searchApi(citySearch, postalSearch, typeSearch){
   .then(function(data){
     printResults(data);
   })
-  .catch(function(){
+  .catch(function(error){
+    console.log(error)
     alert("You're Drunk Dumbass, Try Again");
   })
 };
 
 
-function printDrink(drinkCard, width){
-  const widthPerc = `${width}%`;
-
+function printDrink(drinkCard){
   const nameEl = document.createElement('h3');
   nameEl.textContent = drinkCard.name;
-  nameEl.setAttribute('class', 'col');
+  console.log(drinkCard.name)
+  
+
 
   const addressEl = document.createElement('p');
   addressEl.textContent = drinkCard.address_1;
-  addressEl.setAttribute('class', 'col');
 
+  // let givenPostal = localStorage.getItem('Postal');
+  let longPostal = drinkCard.postal_code;
+  // let gPost = givenPostal.toString();
+  let lPost = longPostal.toString();
+  // const gPost5 = gPost.substring(0, 5);
+  const lPost5 = lPost.substring(0, 5);
+  // if(gPost5 === lPost5){
+  //   return true
+  // } else {
+  //   console.log("The first 5 digits don't match")
+  // }
   const postalEl = document.createElement('p');
-  postalEl.textContent = drinkCard.postal_code;
-  postalEl.setAttribute('class', 'col');
-
+  postalEl.textContent = lPost5;
+  
   let formattedPhone = drinkCard.phone;
   if(drinkCard.phone !== null){
-  const phoneEl = formattedPhone.split(''); 
-  phoneEl.splice(0, 0, '(')
-  phoneEl.splice(4, 0, ')')
-  phoneEl.splice(5, 0, ' ')
-  phoneEl.splice(9, 0, '-')
-  formattedPhone = phoneEl.join('');
+  const phoneElem = formattedPhone.split(''); 
+  phoneElem.splice(0, 0, '(')
+  phoneElem.splice(4, 0, ')')
+  phoneElem.splice(5, 0, ' ')
+  phoneElem.splice(9, 0, '-')
+  formattedPhone = phoneElem.join('');
   } else {
   formattedPhone = 'Unavailable'
   }
-  const phoneEl = document.createElement('div');
+  const phoneEl = document.createElement('p');
   phoneEl.textContent = formattedPhone;
 
   const urlEl = document.createElement('a');
   if(drinkCard.website_url !== null){
     urlEl.setAttribute('href', drinkCard.website_url);
     urlEl.textContent = '🍻 Visit Their Site 🍻'
-    urlEl.setAttribute('class', 'col')
+
   } else{
     urlEl.textContent = 'Unavailable'
   }
 
   const card = document.createElement('p');
-  card.setAttribute('style', `background-image: url(./assets/images/wood-plank-unsplash-small.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; display: inline-block; width: ${widthPerc}; text-align: center; padding: 20px; border-radius: 50px; margin: 10px 10px;`)
+
 
   card
-    .appendChild(nameEl)
+    .appendChild(nameEl) 
     .appendChild(addressEl)
     .appendChild(postalEl)
     .appendChild(phoneEl)
@@ -82,38 +92,39 @@ function printDrink(drinkCard, width){
 
 function printResults(data){
   for (let i=0; i<3; i++){
-    printDrink(data[i], 32.2)
+    printDrink(data[i])
   }
 
   for (let i=3; i<5; i++){
-    printDrink(data[i], 46)
+    printDrink(data[i])
   }
 
   for (let i=5; i<8; i++){
-    printDrink(data[i], 32.2)
+    printDrink(data[i])
   }
 }
 
+getParams();
+// function formSubmit(event) {
+//   event.preventDefault();
 
-function formSubmit(event) {
-  event.preventDefault();
+//   const nameSearch = document.querySelector('#xxxxx').value;
+//   const citySearch = document.querySelector('#xxxxx').value;
+//   const postalSearch = document.querySelector('#xxxxx').value;
+//   const typeSearch = document.querySelector('#xxxxx').value;
 
-  const nameSearch = document.querySelector('#xxxxx').value;
-  const citySearch = document.querySelector('#xxxxx').value;
-  const postalSearch = document.querySelector('#xxxxx').value;
-  const typeSearch = document.querySelector('#xxxxx').value;
-
-  if (!citySearch) {
-    console.error('You need to enter a city!');
-    return;
-  } document.location.assign('search-results.html');
-    localStorage.setItem('Name', nameSearch);
-    localStorage.setItem('City', citySearch);
-    localStorage.setItem('Postal', postalSearch);
-    localStorage.setItem('Type', typeSearch);
-  }
+//   if (!citySearch) {
+//     console.error('You need to enter a city!');
+//     return;
+//   } 
+//   document.location.assign('search-results.html');
+//   localStorage.setItem('Name', nameSearch);
+//   localStorage.setItem('City', citySearch);
+//   localStorage.setItem('Postal', postalSearch);
+//   localStorage.setItem('Type', typeSearch);
+// }
 
 
 // formSel.addEventListener('submit', formSubmit);
 
-getParams();
+// getParams();
