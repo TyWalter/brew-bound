@@ -97,8 +97,8 @@ Cheers! 🍻
 
 
 ## Deployed Application:
-[Click Here](Link to the Repo) to view the Repository for this project.
+[Click Here](https://github.com/TyWalter/brew-bound) to view the Repository for this project.
 
-[Click Here](Link to the app, deployed.) to view the deployed version of the web application. 
+[Click Here](https://tywalter.github.io/brew-bound/) to view the deployed version of the web application. 
 
 
