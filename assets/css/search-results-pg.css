@@ -6,11 +6,7 @@
   --barn-red: #770A05;
   --brew-bound-logo: #644521;
 }
-/* This is where the Hero Img is placed */
-/* header {
-  background-image: url(../images/results-hero-img.jpg);
-  height: 30rem;
-} */
+
 /* The Hero Image */
 .imageContainer {
   width: 100%;
@@ -30,11 +26,9 @@
   transform: translateY(-45%);
 }
 
-
 nav {
   text-align: right;
 }
-
 
 .form-results-title {
   width: 100%;
@@ -54,8 +48,13 @@ nav {
   background-image: url(../images/indoor-brick-wall-texture.jpg);
 }
 
+/* Fetch results */
+#drink-cards .container {
+  background: url(../images/wood-plank-unsplash-small.jpg);
+}
 
-/* Styling for form input*/
+
+/* Styling for form input */
 #redo-search-title {
   background-color: var(--barn-red);
   box-shadow: 0 0 .6rem .3rem var(--alloy-orange);
