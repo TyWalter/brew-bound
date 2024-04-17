@@ -1,6 +1,7 @@
 const formSel = document.querySelector('.brickwall');
 const resultTextEl = document.querySelector('#result-text');
 const drinkCards = document.querySelector('#drink-cards');
+const formResults = document.querySelector('.form-results-title');
 
 
 function getParams(){
@@ -9,8 +10,23 @@ function getParams(){
   const typeEl = localStorage.getItem('Type');
   
   searchApi(cityEl, postalEl, typeEl);
+  resultsFor(cityEl, postalEl, typeEl);
+  console.log(resultsFor())
 }
 
+function resultsFor(citySearch, postalSearch, typeSearch){
+  const cityElem = document.createElement('div');
+  cityElem.textContent = citySearch.city;
+  const postalElem = document.createElement('div');
+  postalElem.textContent = postalSearch.postal_code;
+  const typeElem = document.createElement('div');
+  typeElem.textContent = typeSearch.brewery_type;
+  const resultingSearch = document.createElement('p');
+  resultingSearch.appendChild(cityElem);
+  resultingSearch.appendChild(postalElem);
+  resultingSearch.appendChild(typeElem);
+
+}
 
 function searchApi(citySearch, postalSearch, typeSearch){
   const requestUrl = `https://api.openbrewerydb.org/v1/breweries?by_city=${citySearch}&by_postal=${postalSearch}&by_type=${typeSearch}&per_page=8`;
