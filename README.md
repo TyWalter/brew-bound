@@ -43,9 +43,13 @@ Cheers! 🍻
 
 ## Media Attachments
 
-Below is a screen shot of the Home Page and [other page name(s)].
+Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Gallery. 
+![](home-pg-screenshot)
+![](mobile-screenshot)
 
-Below is a Gif demonstrating the functionality of the web application.
+![]()
+![]()
+
 
 
 ## Our Company: Syntaxic Suga Co.
