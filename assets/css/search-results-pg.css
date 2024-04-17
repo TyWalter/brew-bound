@@ -26,10 +26,10 @@
   transform: translateY(-45%);
 }
 
-nav {
+#home {
   display: flex;
   margin-top: 50px;
-  text-align: right;
+  text-align: center;
 }
 
 .form-results-title {
@@ -247,10 +247,6 @@ width: 300px;
 .copywrite{
   color:rgb(246, 247, 249);
   align-items: center;
-}
-
-nav{
-  text-align: center;
 }
 
 #websiteLink {
